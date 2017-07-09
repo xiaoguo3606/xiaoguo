@@ -1,0 +1,15 @@
+/* TEAM */
+
+	Designer:Xiaoguo Yu
+	Developer:Xiaoguo Yu
+	Weibo:@小果yu
+
+/* SITE */
+
+	Language:Chinese
+	Doctype:HTML
+	Standers:HTML,CSS
+	Components:
+	Core:HTML,CSS,Javascript,PHP,MySQL
+	Software:
+	IDE:HBuilder

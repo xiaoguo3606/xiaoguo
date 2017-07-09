@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="author" content="Xiaoguo Yu"/>
+	<!--统一视口宽度-->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--ie的文档兼容性，强制使用最新的IE浏览器模式渲染页面，IE11这个文档模式已经被弃用了-->
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>小果的小站</title>
+	<link rel="icon" href="favicon.ico"/>
+	<!--引入bootstrap.css-->
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!--引入font-awesome-->
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<!--引入reset.css-->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+	<!--引入main.css-->
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<!--引入jQuery-->
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<!--引入main.js-->
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	
+</head>
+<body data-spy="scroll" data-offset="200">
+	<!--不支持IE<=8的版本,gt/lt/gte/lte-->
+	<!--[if lte IE8]>
+		<p class='browserupgrade'>您的浏览器版本太低，请先升级浏览器！您也可以到 <a href='http://browsehappy.com/'>这里</a> 更新浏览器。</p>
+	<![endif]-->
+	
+	<!--头部-->
+	<header>
+		<!--顶部主导航，采用bootstrap-->
+		<nav class="navbar-fixed-top">
+			<!--顶部导航-->
+			<div id="top-nav">
+				<span id="welcome"> </span>
+				<ul>
+					<li><a href="#">登录</a></li>
+					<li><a href="#">注册</a></li>
+					<li><a href="#">关于</a></li>
+				</ul>
+			</div>
+			<!--主导航-->
+			<div class="navbar navbar-default" role="navigation" id="navbar-menu">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="回到主页"/></a>
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+						<span class="sr-only">Toggle Navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse navbar-responsive-collapse navbar-right">
+					<ul class="nav navbar-nav">
+						<li><a href="#header"><i class="fa fa-home"></i>&nbsp;首页</a></li>
+						<li><a href="#resume"><i class="fa fa-id-card"></i>&nbsp;我的简历</a></li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-bar-chart"></i>&nbsp;技能水平<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#"><i class="fa fa-pie-chart"></i>&nbsp;前端技能</a></li>
+								<li class="divider"></li>
+								<li><a href="#"><i class="fa fa-puzzle-piece"></i>&nbsp;其它技能&nbsp;&nbsp;<i class="label label-default">更多黑技能</i></a></li>
+							</ul>
+						</li>
+						<li><a href="#"><i class="fa fa-envelope"></i>&nbsp;联系我&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	
+	<!--主体-->
+	<div class="content" data-target="#navbar-menu">
+		<!--首页-->
+		<section class="header text-center">
+			<div class="bgimg" id="header">
+				<img src="img/header_bg.jpg" alt="首页背景图" />
+			</div>
+			<div class="headimg">
+				<img src="img/head.jpg" alt="头像" />
+			</div>
+			<h1>余小果</h1>
+			<ul>
+				<li><i class="fa fa-desktop"></i>&nbsp;前端开发</li>&nbsp;&nbsp;&nbsp;&nbsp;
+				<li><i class="fa fa-info"></i>&nbsp;26岁</li>&nbsp;&nbsp;&nbsp;&nbsp;
+				<li><i class="fa fa-graduation-cap"></i>&nbsp;本科</li>&nbsp;&nbsp;&nbsp;&nbsp;
+				<li><i class="fa fa-map-marker"></i>&nbsp;坐标：成都</li>
+			</ul>
+			<p>“一个愿意践行<b>「终生学习」</b>的人。”</p>
+		</section>
+		<!--个人简历-->
+		<section class="resume text-center container">
+			<!--锚点-->
+			<span id="resume" class="anchor"></span>
+			<h1>我的简历</h1>
+			
+		</section>
+		
+		<section class="skill"></section>
+		<section class="skill"></section>
+		<section class="contact"></section>
+	</div>
+	
+	<!--页脚-->
+	<footer class="text-center">
+		<p>Copyright&nbsp;&copy;&nbsp;2017&nbsp;xiaoguo.pro&nbsp;All&nbsp;Rights&nbsp;Reserved</p>
+	</footer>
+	
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
