@@ -161,6 +161,19 @@ picture img{
 	border: 0.5rem solid #fee7e1;
 	border-radius: 0.4rem;
 	margin-top: 0.7rem;
+	box-shadow: 0 0 5px 1px rgba(200,200,255,0.6);
+}
+.content-text h4{
+	font-size: 1.6rem;
+	font-weight: bold;
+}
+.content-text p{
+	font-size: 1.4rem;
+	text-align: left;
+	text-indent: 2em;
+}
+.content-text p sup{
+	text-indent:0;
 }
 @media only screen and (max-width:50em ) {
 	.resume-content ul{
