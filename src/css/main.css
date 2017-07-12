@@ -21,62 +21,24 @@ a:hover,a:active{
 	height: 5rem;
 	margin-top: -5rem;
 }
-/*主导航栏上方的top导航*/
-#top-nav{
-	height: 2rem;
-	background: #777;
-	color: #f7f7f7;
-	line-height: 2rem;
-}
-#top-nav ul{
-	float: right;
-}
-#top-nav li{
-	display: inline-block;
-	padding: 0 1rem;
-}
-#top-nav li+li{
-	border-left: 1px solid #CCCCCC;
-	margin-left: -3px;
-}
-#top-nav li a{
-	color: #f7f7f7;
-}
-#top-nav li a:hover{
-	color: #f00;
-}
-#welcome{
-	display: inline-block;
-	margin-left: 1rem;
-}
-@media only screen and (max-width: 768px) {
-	#top-nav{
-		display: none;
-	}
-	.nav>li:last-child:after{
-		content: "<li><a href="#">登录</a></li>";
-	}
-}
 /*主导航*/
 .navbar{
 	font-size: 1.5rem;
 }
+.navbar-brand img{
+	height: 100%;
+}
 /*首页*/
 .header{
-	
-}
-/*首页背景图*/
-.bgimg{
-	overflow: hidden;
-}
-.bgimg img{
 	width: 100%;
-	height: auto;
+}
+
+picture img{
+	width: 100%;
 }
 /*头像*/
 .headimg{
 	margin-top: -50px;
-	
 }
 .headimg img{
 	display: block;
@@ -84,6 +46,9 @@ a:hover,a:active{
 	margin: 0 auto;
 }
 /*文字*/
+.header{
+	position: relative;
+}
 .header h1{
 	font-size: 2.8rem;
 }
@@ -95,10 +60,19 @@ a:hover,a:active{
 	color: #888;
 }
 .header p{
-	margin-top: 2rem;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 25%;
+	margin-top: -1rem;
 	font-size: 2rem;
+	z-index: 2;
+	color: #eee;
+	text-shadow: 0 2px 3px #555;
 }
-
+.header p b{
+	color: #fff;
+}
 
 
 footer{

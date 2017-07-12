@@ -1,22 +1,15 @@
 
 var windowHeight=$(window).innerHeight();
-
+var rem=parseInt($('html').css('font-size'));
 $(document).ready(function(){
-	getCounter();
-	$(window).scroll(function(e){
-		if($(window).scrollTop()>=20){
-			$('#top-nav').slideUp();
-		}else{
-			$('#top-nav').slideDown();
-		}
-	});
+	$(window).resize(setIndexHeight());
 });
 
-window.onload=function(){
-	$('.bgimg').animate({
-		height:0.5*windowHeight+'px'
-	});
-	$('.header').css('height',windowHeight);
+
+function setIndexHeight(){
+	console.log(rem);
+	$('#header picture img').css('max-height',0.5*windowHeight);
+	$('#header').css('height',windowHeight);
 }
 
 //网站访问量计数器Ajax

@@ -25,7 +25,7 @@
 </head>
 <body data-spy="scroll" data-offset="200">
 	<!--不支持IE<=8的版本,gt/lt/gte/lte-->
-	<!--[if lte IE8]>
+	<!--[if lte IE 8]>
 		<p class='browserupgrade'>您的浏览器版本太低，请先升级浏览器！您也可以到 <a href='http://browsehappy.com/'>这里</a> 更新浏览器。</p>
 	<![endif]-->
 	
@@ -33,15 +33,6 @@
 	<header>
 		<!--顶部主导航，采用bootstrap-->
 		<nav class="navbar-fixed-top">
-			<!--顶部导航-->
-			<div id="top-nav">
-				<span id="welcome"> </span>
-				<ul>
-					<li><a href="#">登录</a></li>
-					<li><a href="#">注册</a></li>
-					<li><a href="#">关于</a></li>
-				</ul>
-			</div>
 			<!--主导航-->
 			<div class="navbar navbar-default" role="navigation" id="navbar-menu">
 				<div class="navbar-header">
@@ -75,10 +66,14 @@
 	<!--主体-->
 	<div class="content" data-target="#navbar-menu">
 		<!--首页-->
-		<section class="header text-center">
-			<div class="bgimg" id="header">
-				<img src="img/header_bg.jpg" alt="首页背景图" />
-			</div>
+		<section class="header text-center" id="header">
+			<p>“一个愿意践行<b>「终生学习」</b>的人。”</p>
+			<picture>
+				<source srcset="img/index_bj_l.jpg" media="(min-width:100em)"/>
+				<source srcset="img/index_bj_m.jpg" media="(min-width:75em)"/>
+				<source srcset="img/index_bj_s.jpg" media="(min-width:50em)"/>
+				<img src="img/index_bj_xs.jpg" alt="首页背景图" />
+			</picture>
 			<div class="headimg">
 				<img src="img/head.jpg" alt="头像" />
 			</div>
@@ -89,14 +84,33 @@
 				<li><i class="fa fa-graduation-cap"></i>&nbsp;本科</li>&nbsp;&nbsp;&nbsp;&nbsp;
 				<li><i class="fa fa-map-marker"></i>&nbsp;坐标：成都</li>
 			</ul>
-			<p>“一个愿意践行<b>「终生学习」</b>的人。”</p>
 		</section>
 		<!--个人简历-->
 		<section class="resume text-center container">
 			<!--锚点-->
 			<span id="resume" class="anchor"></span>
 			<h1>我的简历</h1>
-			
+			<div class="line"></div>
+			<div class="year">
+			</div>
+			<div class="content">
+				<div>
+					<p3>1991年2月</p3>
+					<p>出生于河南省信阳市商城县。</p>
+				</div>
+				<div>
+					<p3>2008年7月-2012年6月</p3>
+					<p>考入吉林大学通信工程学院测控技术与仪器专业。</p>
+				</div>
+				<div>
+					<p3>2012年7月-2017年3月</p3>
+					<p>就职于<a href="http://www.caic-china.com/" target="_blank">成都凯天电子股份有限公司</a>传感器中心,主要负责军用传感器的设计与研发工作。</p>
+				</div>
+				<div>
+					<p3>今天...</p3>
+					<p>正式离职，办理完相关手续后开始自学代码。</p>
+				</div>
+			</div>
 		</section>
 		
 		<section class="skill"></section>
@@ -110,5 +124,6 @@
 	</footer>
 	
 	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="vendor/picturefill.min.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
