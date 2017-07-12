@@ -31,8 +31,8 @@ a:hover,a:active{
 /*首页*/
 .header{
 	width: 100%;
+	padding-top: 50px;
 }
-
 picture img{
 	width: 100%;
 }
@@ -45,6 +45,39 @@ picture img{
 	border-radius: 50px;
 	margin: 0 auto;
 }
+/*为不同屏幕设置不同的响应式样式*/
+@media only screen and (min-width:50em ) {
+	.header{
+		overflow: hidden;
+	}
+	.headimg{
+		position: absolute;
+		top: 45%;
+		left: 50%;
+		margin: -50px 0 0 -50px;
+	}
+	.header h1{
+		position: absolute;
+		left: 50%;
+		top: 55%;
+		width: 80%;
+		margin-left: -40%;
+		color: #fff;
+	}
+	.header ul{
+		position: absolute;
+		left: 50%;
+		top: 70%;
+		width: 80%;
+		margin-left: -40%;
+		color: #fff;
+		margin-top: 0;
+	}
+	.header li:hover{
+		color: #efefef;
+	}
+}
+
 /*文字*/
 .header{
 	position: relative;
@@ -52,19 +85,19 @@ picture img{
 .header h1{
 	font-size: 2.8rem;
 }
+.header ul{
+	margin-top: 3rem;
+}
 .header li{
 	display: inline-block;
 	font-size: 1.5rem;
-}
-.header li:hover{
-	color: #888;
 }
 .header p{
 	position: absolute;
 	width: 100%;
 	left: 0;
 	top: 25%;
-	margin-top: -1rem;
+	margin-top: -2rem;
 	font-size: 2rem;
 	z-index: 2;
 	color: #eee;
@@ -73,6 +106,103 @@ picture img{
 .header p b{
 	color: #fff;
 }
+
+/*个人简历部分*/
+.resume{
+	margin-top: 1000px;
+	background: #fff6b7;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff6b7), to(#f6416c));
+	background: -webkit-linear-gradient(#fff6b7, #f6416c);
+	background: -moz-linear-gradient(#fff6b7, #f6416c);
+	background: -o-linear-gradient(#fff6b7, #f6416c);
+	background: linear-gradient(#fff6b7, #f6416c); 
+	clear: both;
+}
+.resume .resume-content{
+	overflow: auto;
+}
+.resume-content .line{
+	width: 200rem;
+	height: 0;
+	margin-top: 3rem;
+	border-bottom: 0.5rem solid #fee7e1;
+	/*box-shadow: 0 4px 2px 2px rgba(0,0,0,0.1);*/
+}
+.resume-content ul{
+	margin-bottom: 3rem;
+	margin-left: 3rem;
+	overflow: hidden;
+}
+.resume-content ul li{
+	float: left;
+	width: calc(33.3333333% - 3rem);
+	margin: 0 1rem 5rem;
+}
+.rope{
+	margin: -1.2rem auto;
+}
+.rope div:nth-child(1){
+	width: 1.8rem;
+	height: 1.8rem;
+	margin-left: calc(50% - 0.9rem);
+	background: #fee7e1;
+	border-radius: 0.9rem;
+}
+.rope div:nth-child(2){
+	width: 0.5rem;
+	height: 4rem;
+	margin-left: calc(50% - 0.225rem);
+	margin-top: -0.5rem;
+	background: #fee7e1;
+	border-radius: 0.2rem;
+}
+.content-text{
+	background: rgba(255,255,255,0.3);
+	border: 0.5rem solid #fee7e1;
+	border-radius: 0.4rem;
+	margin-top: 0.7rem;
+}
+@media only screen and (max-width:50em ) {
+	.resume-content ul{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.resume-content ul li{
+		float: none;
+		width: 95%;
+		margin: 2rem auto;
+	}
+	.resume-content ul li .rope{
+		display: none;
+	}
+	.line{
+		display: none;
+	}
+	.content-text{
+		border-width: 0.1rem;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 footer{
