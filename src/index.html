@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<!--ie的文档兼容性，强制使用最新的IE浏览器模式渲染页面，IE11这个文档模式已经被弃用了-->
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<title>小果的小站</title>
+	<title>前端开发者简历</title>
 	<link rel="icon" href="favicon.ico"/>
 	<!--引入bootstrap.css-->
 	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -17,10 +17,7 @@
 	<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
 	<!--引入main.css-->
 	<link rel="stylesheet" type="text/css" href="css/main.css"/>
-	<!--引入jQuery-->
-	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-	<!--引入main.js-->
-	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	
 	
 </head>
 <body data-spy="scroll" data-offset="200">
@@ -29,14 +26,15 @@
 		<p class='browserupgrade'>您的浏览器版本太低，请先升级浏览器！您也可以到 <a href='http://browsehappy.com/'>这里</a> 更新浏览器。</p>
 	<![endif]-->
 	
+	<!--定义向下翻页的箭头、回到顶部的箭头-->
+	<aside>
+		<div id="arrow-to-next" class="text-center">
+			<span class="glyphicon glyphicon-menu-down"></span>
+		</div>
+		<div id="arrow-to-top"></div>
+	</aside>
 	<!--头部-->
 	<header>
-		<!--定义向下翻页的箭头、回到顶部的箭头-->
-		<aside>
-			<div id="arrow-to-next"></div>
-			<div id="arrow-to-top"></div>
-		</aside>
-		
 		<!--顶部主导航，采用bootstrap-->
 		<nav class="navbar-fixed-top">
 			<!--主导航-->
@@ -62,7 +60,8 @@
 								<li><a href="#"><i class="fa fa-puzzle-piece"></i>&nbsp;其它技能&nbsp;&nbsp;<i class="label label-default">更多黑技能</i></a></li>
 							</ul>
 						</li>
-						<li><a href="#"><i class="fa fa-envelope"></i>&nbsp;联系我&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+						<li><a href="#"><i class="fa fa-cubes"></i>&nbsp;作品</a></li>
+						<li><a href="#"><i class="fa fa-envelope"></i>&nbsp;联系我&nbsp;&nbsp;</a></li>
 					</ul>
 				</div>
 			</div>
@@ -100,7 +99,7 @@
 			<!--锚点-->
 			<span id="resume" class="anchor"></span>
 			<h1>我的简历</h1>
-			<div class="resume-content">
+			<div class="resume-content" id="resume-content">
 				<div class="line"></div>
 				<ul>
 					<li>
@@ -108,18 +107,8 @@
 							<div></div><div></div>
 						</div>
 						<div class="content-text">
-							<h4>1991年2月</h4>
-							<p>出生于河南省信阳市商城县。</p>
-							<p>生于农村家庭，“少年多磨难”，能吃苦，懂得感恩。</p>
-						</div>
-					</li>
-					<li>
-						<div class="rope">
-							<div></div><div></div>
-						</div>
-						<div class="content-text">
 							<h4>2008年9月-2012年6月</h4>
-							<p>就读于吉林大学测控技术与仪器专业。</p>
+							<p>就读于<a href="http://www.jlu.edu.cn/">吉林大学</a>测控技术与仪器专业。</p>
 							<p>大学期间，我的学习成绩居于中等水平；然而，对于【视觉艺术】和【程序技术】有极大兴趣的我，在课外时间里自学了很多其它知识，如：
 								C/C++、VC++、PS、AI<sup title="Adobe Illustrator，一款矢量绘图软件。" class="easyui-tooltip">
 								<a href="http://baike.baidu.com/item/Adobe%20Illustrator/2297548?fromtitle=AI&fromid=1753722#viewPageContent" target="_blank">
@@ -150,15 +139,21 @@
 					<li>
 						<div class="rope"><div></div><div></div></div>
 						<div class="content-text">
-							<h4>2012年7月-2017年3月</h4>
-							<p>2012年，我来到了我的第一个工作单位：
-							<a href="http://www.caic-china.com/" target="_blank" title="中国航空工业集团公司成员单位，位于成都市成都西站附近。" class="easyui-tooltip">成都凯天电子股份有限公司</a>
-							。</p>
-							<p>在这份工作中，我主要负责军用传感器的设计研发工作，涉及机械、电子/电气技术；2015-2017年间担任团总支书记，积累了一定的管理经验。</p>
-							<p>2016年4月开始，我利用业余时间学习代码；2017年3月，正式离职，工作年限：4年零8个月。</p>
+							<h4>2017年3月至今</h4>
+							<p>潜心自学。</p>
+							<p>常驻<a href="http://study.163.com/" target="_blank">网易云课堂</a>、
+								<a href="http://www.imooc.com/" target="_blank">慕课网</a>、
+								<a href="http://www.w3school.com.cn/h.asp" target="_blank">W3school</a>、
+								<a href="https://github.com/" target="_blank">Github</a>等学习网站，先后系统性地学习了
+								<span class="easyui-tooltip" title="前期以Java后端为主">Java SE/EE、Oracle/My SQL、JSP、Struts/Spring、</span>
+								<span class="easyui-tooltip" title="后期转变方向，专攻前端">HTML/CSS、Javascript、JQuery、Bootstrap、Vue.js、Node.js、Angular.js</span>
+								等。</p>
 						</div>
 					</li>
 				</ul>
+				<div class="clouds">
+					<h3>往事皆是浮云。</h3>
+				</div>
 			</div>
 		</section>
 		
@@ -169,11 +164,30 @@
 	
 	<!--页脚-->
 	<footer class="text-center">
-		<p>Copyright&nbsp;&copy;&nbsp;2017&nbsp;xiaoguo.pro&nbsp;All&nbsp;Rights&nbsp;Reserved</p>
+		<div>
+			<p><b>蜀ICP备17022701号-1</b></p>
+			<p>Copyright&nbsp;&copy;&nbsp;2017&nbsp;xiaoguo.pro&nbsp;All&nbsp;Rights&nbsp;Reserved</p>
+		</div>
 	</footer>
 	
+		
+		
+		
+	<!--引入jQuery库-->
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<!--引入jquery easyui插件，用于完成title显示效果等-->
 	<script src="vendor/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--bootstrap的CDN库-->
 	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!--picturefill插件，用于兼容picture标签，并使图片响应化-->
 	<script src="vendor/picturefill.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--自定义JS文件-->
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	<!--引入有字库字体，全文通用字体-->
+	<script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+	<script type="text/javascript">
+		$youziku.load("body,html", "faa579487a9d47f992c96eca943b8d86", "HiraginoGBW3");
+		$youziku.draw(); 
+	</script>
 </body>
 </html>
