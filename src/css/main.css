@@ -2,7 +2,7 @@
  * 页面样式 
  **************/
 body{
-	font-size: 1.2rem;
+	font-size: 0.12rem;
 	line-height: 1.5;
 	background-color: #fdfdfd;
 	overflow: hidden;
@@ -16,263 +16,226 @@ a:hover,a:active{
 	color: #0ae;
 	text-decoration: underline;
 }
-.anchor{
-	display: inline-block;
-	width: 100%;
-	height: 5rem;
-	margin-top: -5rem;
-}
+
+
+
 
 /*页面固定箭头与回到顶部的箭头*/
 	/*回到顶部*/
 #arrow-to-top{
 	position: fixed;
-	width: 5rem;
-	height: 5rem;
+	width: 0.5rem;
+	height: 0.5rem;
 	background: url(../img/back_to_top.png) center no-repeat rgba(0,0,0,0.5);
 	cursor: pointer;
-	right: 3rem;
-	bottom: 3rem;
-	border-radius: 0.5rem;
+	right: 0.3rem;
+	bottom: 0.3rem;
+	border-radius: 0.05rem;
 	z-index: 2;
 	display: none;
 }
 #arrow-to-top:hover{
 	background: url(../img/back_to_top.png) center no-repeat rgba(0,0,0,0.7);
 }
+@media only screen and (max-width:800px ) {
+	#arrow-to-top{
+		background: url(../img/back_to_top.png) center no-repeat rgba(0,0,0,0.2);
+		right: 0;
+	}
+	#arrow-to-top:hover{
+		background: url(../img/back_to_top.png) center no-repeat rgba(0,0,0,0.4);
+	}
+}
 	/*下一页,实则滚动到下一个锚点*/
 #arrow-to-next{
-	width: 3rem;
-	height: 3rem;
+	width: 0.3rem;
+	height: 0.3rem;
 	position: fixed;
 	left: 50%;
-	bottom: 1rem;
-	margin-left: -1.5rem;
+	bottom: 0.1rem;
+	margin-left: -0.15rem;
 	z-index: 2;
 	animation: arrow 1s infinite;
 	cursor: pointer;
 }
-#arrow-to-next:hover{
-	
-}
 #arrow-to-next span{
-	font-size: 2rem;
+	font-size: 0.2rem;
 	color: #ddd;
 	text-shadow: 0 2px 2px rgba(0,0,0,0.4);
 }
 	/*设置向下箭头的无限循环动画效果*/
 @keyframes arrow{
-	from{bottom: 1.2rem;}
-	to{bottom: 1rem;}
+	from{bottom: 0.12rem;}
+	to{bottom: 0.1rem;}
 }
 @-webkit-keyframes arrow{
-	from{bottom: 1.2rem;}
-	to{bottom: 1rem;}
+	from{bottom: 0.12rem;}
+	to{bottom: 0.1rem;}
 }
 @-ms-keyframes arrow{
-	from{bottom: 1.2rem;}
-	to{bottom: 1rem;}
+	from{bottom: 0.12rem;}
+	to{bottom: 0.1rem;}
 }
 @-moz-keyframes arrow{
-	from{bottom: 1.2rem;}
-	to{bottom: 1rem;}
+	from{bottom: 0.12rem;}
+	to{bottom: 0.1rem;}
 }
 
 
 
 /*主导航*/
 .navbar{
-	font-size: 1.5rem;
+	font-size: 0.15rem;
 }
 .navbar-brand img{
 	height: 100%;
 }
+.dropdown>a{
+	cursor: pointer;
+}
+
+.someWords{
+	opacity: 0.5;
+	font-size: 0.14rem;
+}
+
+
 
 
 /*首页*/
 .header{
 	width: 100%;
-	padding-top: 50px;
-}
-picture img{
-	width: 100%;
+	background: url(../img/bg.png);
 }
 /*头像*/
-.headimg{
-	margin-top: -50px;
-}
 .headimg img{
 	display: block;
-	border-radius: 50px;
-	margin: 0 auto;
-	width: 100px;
+	border-radius: 0.75rem;
+	margin: 0.1rem auto;
+	width: 1.5rem;
 }
-/*为不同屏幕设置不同的响应式样式*/
-@media only screen and (min-width:50em ) {
-	.header{
-		overflow: hidden;
-	}
-	.headimg{
-		position: absolute;
-		top: 45%;
-		left: 50%;
-		margin: -50px 0 0 -50px;
-	}
-	.header h1{
-		position: absolute;
-		left: 50%;
-		top: 55%;
-		width: 80%;
-		margin-left: -40%;
-		color: #fff;
-	}
-	.header ul{
-		position: absolute;
-		left: 50%;
-		top: 70%;
-		width: 80%;
-		margin-left: -40%;
-		color: #fff;
-		margin-top: 0;
-	}
-	.header li:hover{
-		color: #efefef;
-	}
+.content .header>div>h1{
+	line-height: 400%;
 }
-
-/*文字*/
-.header{
-	position: relative;
-}
-.header h1{
-	font-size: 2.8rem;
+.header h2{
+	margin-top: 0.4rem;
 }
 .header ul{
-	margin-top: 2rem;
+	margin-top: 0.5rem;
 }
 .header li{
 	display: inline-block;
-	font-size: 1.5rem;
+	font-size: 0.18rem;
 }
-.header p{
-	position: absolute;
-	width: 100%;
-	left: 0;
-	top: 25%;
-	margin-top: -2rem;
-	font-size: 2rem;
-	z-index: 2;
-	color: #eee;
-	text-shadow: 0 2px 3px #555;
+
+@media screen and (max-width: 800px) {
+	.headimg img{
+		border-radius: 0.5rem;
+		width: 1rem;
+	}
 }
-.header p b{
-	color: #fff;
-}
+
+
 
 /*个人简历部分*/
 .resume{
-	background: #89ccff;
-	background: -webkit-gradient(linear, 0 0, 0 100%, from(#4075b0), to(#869dff));
-	background: -webkit-linear-gradient(#4075b0, #869dff);
-	background: -moz-linear-gradient(#4075b0, #869dff);
-	background: -o-linear-gradient(#4075b0, #869dff);
-	background: linear-gradient(#4075b0, #869dff); 
-	clear: both;
+	background: #d6e0e8;
 }
-.resume h1{
+#accordion{
+	width: 70%;
+	margin: 0 auto;
+}
+#accordion h3{
+	font-size: 0.2rem;
+	text-align: left;
+}
+#accordion h3.ui-state-active small{
 	color: #fff;
 }
-.resume-content{
-	overflow: auto;
-	background-image: url(../img/cloouds.png);
+#accordion div{
+	height: 2rem;
 }
-.resume-content .line{
-	width: 100%;
-	height: 0;
-	margin-top: 3rem;
-	border-bottom: 0.5rem solid #fee7e1;
-}
-.resume-content ul{
-	margin-bottom: 3rem;
-	margin-left: 3rem;
-	overflow: auto;
-}
-.resume-content ul li{
-	float: left;
-	width: calc(33.3333333% - 3rem);
-	margin: 0 1rem;
-}
-.rope{
-	margin: -1.2rem auto;
-}
-.rope div:nth-child(1){
-	width: 1.8rem;
-	height: 1.8rem;
-	margin-left: calc(50% - 0.9rem);
-	background: #fee7e1;
-	border-radius: 0.9rem;
-}
-.rope div:nth-child(2){
-	width: 0.5rem;
-	height: 4rem;
-	margin-left: calc(50% - 0.225rem);
-	margin-top: -0.5rem;
-	background: #fee7e1;
-	border-radius: 0.2rem;
-}
-.content-text{
-	background: rgba(255,255,255,0.8);
-	border: 0.5rem solid #fee7e1;
-	border-radius: 0.4rem;
-	margin-top: 0.7rem;
-	box-shadow: 0 0 5px 1px rgba(200,200,255,0.6);
-}
-.content-text h4{
-	font-size: 1.6rem;
-	font-weight: bold;
-}
-.content-text p{
-	font-size: 1.4rem;
+#accordion p{
+	font-size: 0.16rem;
 	text-align: left;
 	text-indent: 2em;
+	line-height: 0.3rem;
 }
-.content-text p sup{
-	text-indent:0;
+#accordion p sup{
+	text-indent: 0;
 }
-@media only screen and (max-width:50em ) {
-	.resume-content ul{
-		margin-left: auto;
-		margin-right: auto;
+@media screen and (max-width:800px ) {
+	#accordion{
+		width: 90%;
+		line-height: 0.12em;
 	}
-	.resume-content ul li{
-		float: none;
-		width: 95%;
-		margin: 2rem auto;
-	}
-	.resume-content ul li .rope{
-		display: none;
-	}
-	.line{
-		display: none;
-	}
-	.content-text{
-		border-width: 0.1rem;
-	}
-}
-.clouds{
-	position: relative;
-	height: 10rem;
-	
-}
-.clouds h3{
-	position: absolute;
-	color: #fff;
-	left: 20%;
-	top: 0;
 }
 
-
-
+/*前端技能部分*/
+.front-skill{
+	background:url(../img/bg_green.jpg);
+}
+.front-skill .skill-text{
+	background: rgba(255,255,255,0.3);
+	box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
+.other-skill{
+	background:url(../img/bg_black.jpg);
+	color: #eee;
+}
+.other-skill .skill-text{
+	background: rgba(0,0,0,0.3);
+	box-shadow: 0 5px 5px rgba(255,255,255,0.2);
+}
+.skill-text{
+	width: 4rem;
+	margin: 0 auto;
+	border: 2px solid #333;
+	padding: 0.1rem 0.2rem;
+	border-radius: 0.1rem;
+	line-height: 1.5em;
+	font-size: 0.16rem;
+}
+@media only screen and (max-width:450px ) {
+	.skill-text{
+		font-size: 0.14rem;
+	}
+}
+@media only screen and (max-width:340px ) {
+	.skill-text{
+		font-size: 0.12rem;
+	}
+}
+.skill-text p{
+	margin-bottom: 0;
+}
+.skill img{
+	margin-top: 0.2rem;
+	margin-bottom: 0.2rem;
+}
+.slide>div{
+	padding-top: 0;
+}
+.fp-tableCell{
+	vertical-align: top;
+}
+.fp-tableCell h4{
+	margin-top: 0.7rem;
+}
+@media only screen and (max-width: 480px) {
+	.fp-tableCell h4{
+		margin-top: 0.3rem;
+	}
+	.skill img{
+		width: 65%;
+		/*margin-top: -1rem;*/
+		margin-bottom: 1rem;
+	}
+	.skill-text{
+		width: 70%;
+		margin-top: -0.8rem;
+	}
+}
 
 
 
@@ -292,19 +255,22 @@ picture img{
 
 
 footer{
-	margin-top: 5rem;
+	margin-top: 0.5rem;
 	width: 100%;
-	height: 8rem;
+	height: 0.8rem;
 	background-color: #eee;
 	color: #888;
-	padding: 2rem 0;
+	padding: 0.2rem 0;
+	position: absolute;
+	left: 0;
+	bottom: 0;
 }
 footer div{
-	height: 4rem;
+	height: 0.4rem;
 }
 footer div p{
-	font-size: 1.2rem;
-	line-height: 1rem;
+	font-size: 0.12rem;
+	line-height: 0.1rem;
 }
 
 /* =============
@@ -312,9 +278,10 @@ footer div p{
  ============ */
 
 html{
-	font-size: 62.5%;
+	font-size: 625%;
 	color: #222;
 }
+
 
 ::selection{
 	background-color: #b3d4fc;
@@ -383,6 +350,6 @@ li{
  ============ */
 .browserupgrade{
 	margin: 0;
-	padding: 1rem;
+	padding: 0.1rem;
 	background: #ccc;
 }

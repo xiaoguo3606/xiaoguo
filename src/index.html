@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="author" content="Xiaoguo Yu"/>
+	<meta name="keywords" content="前端开发者简历 个人简历 余小果"/>
 	<!--统一视口宽度-->
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<!--ie的文档兼容性，强制使用最新的IE浏览器模式渲染页面，IE11这个文档模式已经被弃用了-->
@@ -11,6 +12,10 @@
 	<link rel="icon" href="favicon.ico"/>
 	<!--引入bootstrap.css-->
 	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!--引入jquery ui相关CSS-->
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css"/>
+	<!--引入fullpage-->
+	<link rel="stylesheet" type="text/css" href="vendor/fullpage/jquery.fullpage.min.css"/>
 	<!--引入font-awesome-->
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<!--引入reset.css-->
@@ -20,7 +25,7 @@
 	
 	
 </head>
-<body data-spy="scroll" data-offset="200">
+<body>
 	<!--不支持IE<=8的版本,gt/lt/gte/lte-->
 	<!--[if lte IE 8]>
 		<p class='browserupgrade'>您的浏览器版本太低，请先升级浏览器！您也可以到 <a href='http://browsehappy.com/'>这里</a> 更新浏览器。</p>
@@ -49,19 +54,19 @@
 					</button>
 				</div>
 				<div class="collapse navbar-collapse navbar-responsive-collapse navbar-right">
-					<ul class="nav navbar-nav">
-						<li><a href="#header"><i class="fa fa-home"></i>&nbsp;首页</a></li>
-						<li><a href="#resume"><i class="fa fa-id-card"></i>&nbsp;我的简历</a></li>
-						<li class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-bar-chart"></i>&nbsp;技能水平<span class="caret"></span></a>
+					<ul class="nav navbar-nav" id="navbar-nav">
+						<li data-menuanchor='header'><a href="#header"><i class="fa fa-home"></i>&nbsp;首页</a></li>
+						<li data-menuanchor='resume'><a href="#resume"><i class="fa fa-id-card"></i>&nbsp;我的简历</a></li>
+						<li class="dropdown" id="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bar-chart"></i>&nbsp;技能水平<span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li><a href="#"><i class="fa fa-pie-chart"></i>&nbsp;前端技能</a></li>
+								<li data-menuanchor='front-skill'><a href="#front-skill"><i class="fa fa-pie-chart"></i>&nbsp;前端技能</a></li>
 								<li class="divider"></li>
-								<li><a href="#"><i class="fa fa-puzzle-piece"></i>&nbsp;其它技能&nbsp;&nbsp;<i class="label label-default">更多黑技能</i></a></li>
+								<li data-menuanchor='other-skill'><a href="#other-skill"><i class="fa fa-puzzle-piece"></i>&nbsp;其它技能&nbsp;&nbsp;<i class="label label-default">更多黑技能</i></a></li>
 							</ul>
 						</li>
-						<li><a href="#"><i class="fa fa-cubes"></i>&nbsp;作品</a></li>
-						<li><a href="#"><i class="fa fa-envelope"></i>&nbsp;联系我&nbsp;&nbsp;</a></li>
+						<li data-menuanchor='my-opus'><a href="#my-opus"><i class="fa fa-cubes"></i>&nbsp;作品</a></li>
+						<li data-menuanchor='contact-me'><a href="#contact-me"><i class="fa fa-envelope"></i>&nbsp;联系我&nbsp;&nbsp;</a></li>
 					</ul>
 				</div>
 			</div>
@@ -69,118 +74,212 @@
 	</header>
 	
 	<!--主体-->
-	<div class="content" data-target="#navbar-menu">
+	<div class="content" id="content">
+		
 		<!--首页-->
-		<section class="header text-center" id="header">
-			<p>“一个愿意践行<b>「终生学习」</b>的人。”</p>
-			<picture>
-				<!--em=16px,当屏幕宽度>=75*16px=1200px时，显示最大的图-->
-				<source srcset="img/index_bj_l.jpg" media="(min-width:75em)"/>
-				<!--当屏幕宽度大于等于800px时，显示中等大小的图（1200*750）-->
-				<source srcset="img/index_bj_m.jpg" media="(min-width:50em)"/>
-				<!--当屏幕宽度大于等于480px时，显示小图-->
-				<source srcset="img/index_bj_s.jpg" media="(min-width:30em)"/>
-				<!--如果都不满足上述条件,即屏幕宽度小于480px时,显示最小的图-->
-				<img src="img/index_bj_xs.jpg" alt="首页背景图" />
-			</picture>
-			<div class="headimg">
-				<img src="img/head.jpg" alt="头像" />
-			</div>
-			<h1>余小果</h1>
-			<ul>
-				<li title="愿意从实习岗开始。" class="easyui-tooltip"><i class="fa fa-desktop"></i>&nbsp;前端开发</li>&nbsp;&nbsp;&nbsp;&nbsp;
-				<li><i class="fa fa-info"></i>&nbsp;26岁</li>&nbsp;&nbsp;&nbsp;&nbsp;
-				<li title="毕业于吉林大学测控技术与仪器专业。" class="easyui-tooltip"><i class="fa fa-graduation-cap"></i>&nbsp;本科</li>&nbsp;&nbsp;&nbsp;&nbsp;
-				<li title="现居住于成都市西二环，新房位于温江区。" class="easyui-tooltip"><i class="fa fa-map-marker"></i>&nbsp;坐标：成都</li>
-			</ul>
+		<section class="header text-center section">
+			<!--<div>-->
+				<h1>一个愿意践行终生学习的人。</h1>
+				<div>
+					<div class="headimg">
+						<img src="img/head.jpg" alt="头像" />
+					</div>
+					<h2>余小果</h2>
+					<ul>
+						<li title="愿意从实习岗开始。"><i class="fa fa-desktop"></i>&nbsp;前端开发</li>&nbsp;&nbsp;&nbsp;&nbsp;
+						<li><i class="fa fa-info"></i>&nbsp;26岁</li>&nbsp;&nbsp;&nbsp;&nbsp;
+						<li title="毕业于吉林大学测控技术与仪器专业。"><i class="fa fa-graduation-cap"></i>&nbsp;本科</li>&nbsp;&nbsp;&nbsp;&nbsp;
+						<li title="现居住于成都市西二环，新房位于温江区。"><i class="fa fa-map-marker"></i>&nbsp;坐标：成都</li>
+					</ul>
+				</div>
+			<!--</div>-->
+			
 		</section>
 		<!--个人简历-->
-		<section class="resume text-center">
-			<!--锚点-->
-			<span id="resume" class="anchor"></span>
+		<section class="resume text-center section">
 			<h1>我的简历</h1>
+			<p class="someWords">“过去的一切都是浮云。”</p>
 			<div class="resume-content" id="resume-content">
-				<div class="line"></div>
-				<ul>
-					<li>
-						<div class="rope">
-							<div></div><div></div>
-						</div>
-						<div class="content-text">
-							<h4>2008年9月-2012年6月</h4>
-							<p>就读于<a href="http://www.jlu.edu.cn/">吉林大学</a>测控技术与仪器专业。</p>
-							<p>大学期间，我的学习成绩居于中等水平；然而，对于【视觉艺术】和【程序技术】有极大兴趣的我，在课外时间里自学了很多其它知识，如：
-								C/C++、VC++、PS、AI<sup title="Adobe Illustrator，一款矢量绘图软件。" class="easyui-tooltip">
-								<a href="http://baike.baidu.com/item/Adobe%20Illustrator/2297548?fromtitle=AI&fromid=1753722#viewPageContent" target="_blank">
-								<i class="fa fa-question-circle-o"></i></a></sup>
-								、AE<sup title="Adobe After Effects，一款非线性特效制作软件。" class="easyui-tooltip">
-								<a href="http://baike.baidu.com/item/Adobe%20After%20Effects/5452364?fromtitle=ae&fromid=1368576" target="_blank">
-								<i class="fa fa-question-circle-o"></i></a></sup>
-								、Pr<sup title="Adobe Premiere，一款视频编辑软件。" class="easyui-tooltip">
-								<a href="http://baike.baidu.com/item/adobe%20premiere/896334?fromtitle=PR&fromid=1706930" target="_blank">
-								<i class="fa fa-question-circle-o"></i></a></sup>
-								、3Ds&nbsp;Max<sup title="3D Studio Max，一款3d建模、绘画及动作制作软件。" class="easyui-tooltip">
-								<a href="http://baike.baidu.com/item/3ds%20max?fromtitle=3dsmax&fromid=2236316" target="_blank">
-								<i class="fa fa-question-circle-o"></i></a></sup>
-								等；很快，我就成为了班级里的“电脑小能手”。</p>
-						</div>
-					</li>
-					<li>
-						<div class="rope"><div></div><div></div></div>
-						<div class="content-text">
-							<h4>2012年7月-2017年3月</h4>
-							<p>2012年，我来到了我的第一个工作单位：
-							<a href="http://www.caic-china.com/" target="_blank" title="中国航空工业集团公司成员单位，位于成都市成都西站附近。" class="easyui-tooltip">成都凯天电子股份有限公司</a>
-							。</p>
-							<p>在这份工作中，我主要负责军用传感器的设计研发工作，涉及机械、电子/电气技术；2015-2017年间担任团总支书记，积累了一定的管理经验。</p>
-							<p>2016年4月开始，我利用业余时间学习代码；2017年3月，正式离职，工作年限：4年零8个月。</p>
-						</div>
-					</li>
-					<li>
-						<div class="rope"><div></div><div></div></div>
-						<div class="content-text">
-							<h4>2017年3月至今</h4>
-							<p>潜心自学。</p>
-							<p>常驻<a href="http://study.163.com/" target="_blank">网易云课堂</a>、
-								<a href="http://www.imooc.com/" target="_blank">慕课网</a>、
-								<a href="http://www.w3school.com.cn/h.asp" target="_blank">W3school</a>、
-								<a href="https://github.com/" target="_blank">Github</a>等学习网站，先后系统性地学习了
-								<span class="easyui-tooltip" title="前期以Java后端为主">Java SE/EE、Oracle/My SQL、JSP、Struts/Spring、</span>
-								<span class="easyui-tooltip" title="后期转变方向，专攻前端">HTML/CSS、Javascript、JQuery、Bootstrap、Vue.js、Node.js、Angular.js</span>
-								等。</p>
-						</div>
-					</li>
-				</ul>
-				<div class="clouds">
-					<h3>往事皆是浮云。</h3>
+				<div id="accordion">
+					<h3>大学&nbsp;&nbsp;<small>get新技能</small></h3>
+					<div>
+						<p>2008年-2012年期间，我就读于<a href="http://www.jlu.edu.cn/">吉林大学</a>测控技术与仪器专业。</p>
+						<p>大学期间，我的学习成绩居于中等水平；然而，对“视觉艺术”和编程有极大兴趣的我，在课余时间通过自学get了很多新技能，如：
+						C/C++、VC++、PS、AI<sup title="Adobe Illustrator，一款矢量绘图软件。" class="easyui-tooltip">
+						<a href="http://baike.baidu.com/item/Adobe%20Illustrator/2297548?fromtitle=AI&fromid=1753722#viewPageContent" target="_blank">
+						<i class="fa fa-question-circle-o"></i></a></sup>
+						、AE<sup title="Adobe After Effects，一款非线性特效制作软件。" class="easyui-tooltip">
+						<a href="http://baike.baidu.com/item/Adobe%20After%20Effects/5452364?fromtitle=ae&fromid=1368576" target="_blank">
+						<i class="fa fa-question-circle-o"></i></a></sup>
+						、Pr<sup title="Adobe Premiere，一款视频编辑软件。" class="easyui-tooltip">
+						<a href="http://baike.baidu.com/item/adobe%20premiere/896334?fromtitle=PR&fromid=1706930" target="_blank">
+						<i class="fa fa-question-circle-o"></i></a></sup>
+						、3Ds&nbsp;Max<sup title="3D Studio Max，一款3d建模、绘画及动作制作软件。" class="easyui-tooltip">
+						<a href="http://baike.baidu.com/item/3ds%20max?fromtitle=3dsmax&fromid=2236316" target="_blank">
+						<i class="fa fa-question-circle-o"></i></a></sup>
+						等；很快，我就成为了班级里的“电脑小能手”。</p>
+					</div>
+					
+					<h3>前一份工作&nbsp;&nbsp;<small>第一份工作</small></h3>
+					<div>
+						<p>2012年7月，我来到了我的第一个工作单位：
+						<a href="http://www.caic-china.com/" target="_blank" title="中国航空工业集团公司成员单位，位于成都市成都西站附近。" class="easyui-tooltip">成都凯天电子股份有限公司</a>
+						。</p>
+						<p>在这份工作中，我主要负责军用传感器的设计研发工作，涉及机械、电子/电气技术；2015-2017年间担任团总支书记，积累了一定的管理经验。</p>
+						<p>2016年4月开始，我利用业余时间学习代码；2017年3月，正式离职，工作年限：4年零8个月。</p>
+					</div>
+					
+					<h3>如今&nbsp;&nbsp;<small>韬光养晦</small></h3>
+					<div>
+						<p>常驻<a href="http://study.163.com/" target="_blank">网易云课堂</a>、
+						<a href="http://www.imooc.com/" target="_blank">慕课网</a>、
+						<a href="http://www.w3school.com.cn/h.asp" target="_blank">W3school</a>、
+						<a href="https://github.com/" target="_blank">Github</a>等学习网站，先后系统性地学习了
+						Java SE/EE、Oracle/My SQL、JSP、Struts/Spring、HTML/CSS、Javascript、JQuery、Bootstrap、Vue.js、Node.js、Angular.js
+						等。</p>
+						<p>除了在学习时编写一些测试用例，还自学搭建了个人网站（即本站）。</p>
+					</div>
 				</div>
 			</div>
 		</section>
-		
-		<section class="skill"></section>
-		<section class="skill"></section>
-		<section class="contact"></section>
+		<!--前端技能-->
+		<section class="skill front-skill text-center section">
+			<div>
+				<h1>前端技能</h1>
+				<p class="someWords">“每天都在get新技能。”</p>
+				<div class="slide">
+					<h4><span class="badge">1/5</span>&nbsp;HTML/CSS基础</h4>
+					<img src="img/html_css.png" alt="html/css" />
+					<div class="text-left skill-text">
+						<p><span class="fa fa-check-square-o"></span>&nbsp;熟练手写HTML/CSS代码；</p>
+						<p><span class="fa fa-check-square-o"></span>&nbsp;熟悉H5、CSS3标准；</p>
+						<p><span class="fa fa-check-square-o"></span>&nbsp;熟练进行常规页面布局及响应式布局；</p>
+						<p><span class="fa fa-check-square-o"></span>&nbsp;熟悉TCP/HTTP标准；</p>
+						<p><span class="fa fa-check-square-o"></span>&nbsp;精通PS；</p>
+						<p><span class="fa fa-check-square-o"></span>&nbsp;了解常见浏览器兼容性问题。</p>
+					</div>
+				</div>
+				<div class="slide">
+					<h4><span class="badge">2/5</span>&nbsp;JS基础</h4>
+					<img src="img/javascript.png" alt="javascript" />
+					<div class="text-left skill-text">
+						<p><span class="fa fa-check-square-o"></span>&nbsp;熟练手写JS原生代码；</p>
+						<p><span class="fa fa-check-square-o"></span>&nbsp;熟练进行DOM操作；</p>
+						<p><span class="fa fa-check-square-o"></span>&nbsp;对面向对象有一定的理解；</p>
+						<p><span class="fa fa-check-square-o"></span>&nbsp;熟练进行Ajax+JSON与后台进行数据交互；</p>
+						<p><span class="fa fa-check-square-o"></span>&nbsp;了解常见兼容性问题。</p>
+					</div>
+				</div>
+				<div class="slide">
+					<h4><span class="badge">3/5</span>&nbsp;前端常用框架</h4>
+					<img src="img/jquery_bootstrap.png" alt="jquery&bootstrap" />
+					<div class="text-left skill-text">
+						<p><span class="fa fa-check-square-o"></span>&nbsp;熟练应用JQuery及Bootstrap；</p>
+						<p><span class="fa fa-check-square-o"></span>&nbsp;较强的文档阅读能力；</p>
+						<p><span class="fa fa-check-square-o"></span>&nbsp;有一定的实战开发经验；</p>
+						<p><span class="fa fa-check-square-o"></span>&nbsp;能够迅速上手其它常见前端框架。</p>
+					</div>
+				</div>
+				<div class="slide">
+					<h4><span class="badge">4/5</span>&nbsp;前端工具</h4>
+					<img src="img/node_and_other.png" alt="node.js&other" />
+					<div class="text-left skill-text">
+						<p><span class="fa fa-check-square-o"></span>&nbsp;熟悉node.js与npm工具；</p>
+						<p><span class="fa fa-check-square-o"></span>&nbsp;熟悉常用版本控制工具，如Git及Github等；</p>
+						<p><span class="fa fa-check-square-o"></span>&nbsp;熟练使用代码编辑工具，如Sublime、Webstorm等；</p>
+						<p><span class="fa fa-check-square-o"></span>&nbsp;熟悉常见web服务器构建工具，如Tomcat、Wampserver、IIS等。</p>
+					</div>
+				</div>
+				<div class="slide">
+					<h4><span class="badge">5/5</span>&nbsp;高级技术</h4>
+					<img src="img/angular_vue.png" alt="angular.js&vue.js" />
+					<div class="text-left skill-text">
+						<p><span class="fa fa-circle-o-notch fa-spin"></span>&nbsp;正在学习Angular.js和Vue.js；</p>
+						<p><span class="fa fa-circle-o-notch fa-spin"></span>&nbsp;更多技能正在学习中……</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--其它技能-->
+		<section class="skill other-skill text-center section">
+			<div>
+				<h1 title="更多黑技能。这也许就是我的特别之处。">其它技能</h1>
+				<p class="someWords">“热爱学习的我，技能当然特别多。”</p>
+				<div class="slide">
+					<h4><span class="badge">1/4</span>&nbsp;后端</h4>
+					<img src="img/java_and_other.png" alt="java and other skills" />
+					<div class="text-left skill-text">
+						<p><span class="fa fa-check-square-o"></span>&nbsp;曾系统学习后端：Java SE/EE、Oracle、MySQL、JSP技术；</p>
+						<p><span class="fa fa-check-square-o"></span>&nbsp;了解PHP语言；</p>
+						<p><span class="fa fa-check-square-o"></span>&nbsp;了解后端运行机制，熟悉常见设计模式，如工厂、代理、MVC等；</p>
+						<p><span class="fa fa-check-square-o"></span>&nbsp;了解Struts、Spring等后端框架。</p>
+					</div>
+				</div>
+				<div class="slide">
+					<h4><span class="badge">2/4</span>&nbsp;“视觉语言”</h4>
+					<img src="img/ps_and_other.png" alt="ps and other skills" />
+					<div class="text-left skill-text">
+						<p><span class="fa fa-check-square-o"></span>&nbsp;对视觉语言情有独钟，玩转各类单反相机；</p>
+						<p><span class="fa fa-check-square-o"></span>&nbsp;超过7年的PS使用经验；</p>
+						<p><span class="fa fa-check-square-o"></span>&nbsp;熟练使用AE、PR、AA等软件完成短片剪辑与制作；</p>
+						<p><span class="fa fa-check-square-o"></span>&nbsp;对3DsMax、Maya等3D软件也有一定的使用经验。</p>
+					</div>
+				</div>
+				<div class="slide">
+					<h4><span class="badge">3/4</span>&nbsp;机械+电子</h4>
+					<img src="img/jixie_and_dianzi.png" alt="机械+电子" />
+					<div class="text-left skill-text">
+						<p><span class="fa fa-check-square-o"></span>&nbsp;在我的前一份工作中，机械设计是一门基本功；</p>
+						<p><span class="fa fa-check-square-o"></span>&nbsp;电子电路技术是我在大学主修的课程；</p>
+						<p><span class="fa fa-check-square-o"></span>&nbsp;对材料力学、数据采集技术有所了解。</p>
+					</div>
+				</div>
+				<div class="slide">
+					<h4><span class="badge">4/4</span>&nbsp;管理</h4>
+					<img src="img/guanli.png" alt="管理" />
+					<div class="text-left skill-text">
+						<p><span class="fa fa-check-square-o"></span>&nbsp;有一定的团队管理经验；</p>
+						<p><span class="fa fa-check-square-o"></span>&nbsp;常读德鲁克经典管理学著作；</p>
+						<p><span class="fa fa-check-square-o"></span>&nbsp;喜欢研究管理学，对团队管理有一些自己的思考。</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--作品-->
+		<section class="my-opus text-center section">
+			<h1>作品</h1>
+			<p class="someWords">“没有最好的作品，只有更好的作品。”</p>
+		</section>
+		<!--联系我-->
+		<section class="contact text-center section">
+			<h1>联系我</h1>
+			<p class="someWords">“我没有退路，只有一往无前。”</p>
+			<!--页脚,备案信息-->
+			<footer>
+				<div>
+					<p><b>蜀ICP备17022701号-1</b></p>
+					<p>Copyright&nbsp;&copy;&nbsp;2017&nbsp;xiaoguo.pro&nbsp;All&nbsp;Rights&nbsp;Reserved</p>
+				</div>
+			</footer>
+		</section>
 	</div>
 	
-	<!--页脚-->
-	<footer class="text-center">
-		<div>
-			<p><b>蜀ICP备17022701号-1</b></p>
-			<p>Copyright&nbsp;&copy;&nbsp;2017&nbsp;xiaoguo.pro&nbsp;All&nbsp;Rights&nbsp;Reserved</p>
-		</div>
-	</footer>
 	
 		
 		
 		
 	<!--引入jQuery库-->
 	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-	<!--引入jquery easyui插件，用于完成title显示效果等-->
-	<script src="vendor/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--引入jquery UI-->
+	<script src="vendor/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--jquery mousewheel plugin-->
 	<!--bootstrap的CDN库-->
 	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<!--picturefill插件，用于兼容picture标签，并使图片响应化-->
 	<script src="vendor/picturefill.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--引入fullpage-->
+	<script src="vendor/fullpage/jquery.fullpage.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="vendor/fullpage/scrolloverflow.min.js" type="text/javascript" charset="utf-8"></script>
 	<!--自定义JS文件-->
 	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
 	<!--引入有字库字体，全文通用字体-->
