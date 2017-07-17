@@ -1,5 +1,8 @@
-
+var windowWidth=$(window).innerWidth();
 $(document).ready(function(){
+	
+//	页面访问量统计
+	getCounter();
 	
 //	启用fullpage相关预设
 	$('#content').fullpage({
@@ -35,13 +38,11 @@ $(document).ready(function(){
 //		触摸灵敏度,15为默认值
 		touchSensitivity: 15,
 //		在#resume-content中,滚动滚轮或滑动屏幕将不触发翻页
-		normalScrollElements:'#resume-content',
+		normalScrollElements:'#resume-content,.my-opus ul',
 //		垂直居中
 		verticalCentered:true,
 		//避免导航栏遮挡
-		paddingTop:'0.5rem',
-		
-		dragAndMove:true
+		paddingTop:'0.5rem'
 	});
 	
 //	下一页按钮
@@ -74,6 +75,48 @@ $(document).ready(function(){
 		}
 	});
 	
+//	针对移动端,修正小屏幕时技能页溢出问题
+	if($(window).innerHeight()<520){
+		$('.fp-tableCell h4').css('margin-top',0);
+		$('.skill img').css({
+			'margin-bottom':'0.05rem',
+			'margin-top':'0.05rem'
+		});
+	};
+	
+//	复制到剪切板,采用clipboard插件
+	var copy=new Clipboard('#copy-email');
+	copy.on('success',function(e){
+		$('#copy-email').html('<span class="fa fa-check-circle"></span>&nbsp;已复制');
+		$('#copy-email').css({
+			backgroundColor:'#3cec40',
+			borderColor:'#3ddb41',
+			color:'#222'
+		})
+		e.clearSelection();
+	});
+	copy.on('error',function(e){
+		alert('对不起，您的浏览器无法复制，请手动复制...');
+	});
+	
+	
+	$(window).resize(function(){
+		windowWidth=$(window).innerWidth();
+		if(windowWidth<=768){
+			$('.my-opus-link').unbind();
+		}else{
+			$('.my-opus-link').hover(function(){
+				$(this).children('.black_bg').fadeIn(100,function(){
+					$(this).next('.black_bg_link').fadeIn(100);
+				});
+			},function(){
+				$(this).children('.black_bg_link').fadeOut(100,function(){
+					$(this).prev('.black_bg').fadeOut(100);
+				});
+			});
+		};
+	}).trigger('resize');
+	
 	
 	
 //	设置title显示效果,基于jquery ui
@@ -81,6 +124,9 @@ $(document).ready(function(){
 	
 //	设置简历页中弹性标签效果,基于jquery ui
 	$('#accordion').accordion({
+		heightStyle:'fill'
+	});
+	$('#contact-me-content').accordion({
 		heightStyle:'fill'
 	});
 
@@ -92,45 +138,19 @@ $(document).ready(function(){
 
 
 
-/**
- * 自定义滚动窗口的动画
- * @param {Object} top 要滚动到的位置
- * @param {Object} speed 滚动速度
- */
-function scrollAnimate(top,speed){
-	$('html,body').animate({
-		scrollTop : top
-	},speed);
-}
-
-
-/**
- * 自定义函数，取出全部锚点的href属性值（href不能为空或#），拼按顺序放入一个数组中
- * @return 由锚点所组成的数组，由字符串组成
- */
-function getAuthors(){
-	var result=new Array();
-	$('.navbar-nav li a').each(function(){
-		var temp=$(this).attr('href');
-		if(temp && temp!='#'){
-			result.push(temp);
-		}
-	});
-	return result;
-}
 
 //网站访问量计数器Ajax
 function getCounter(){
 	$.ajax({
-		type:"get",
-		url:"../php/counter.php",
-		async:true,
+		url:'php/counter.php',
+		type:'GET',
 		dataType:'text',
-		success:function(data){
-			$('#welcome').text(data);
+		success: function(data){
+			$('#guest_count').html('&nbsp;<span class="fa fa-bar-chart" style="color:#a3b2ff"></span>'+data);
 		},
-		error:function(jqXHR){
-			$('#welcome').text('欢迎您！');
+		error:function(){
+			console.log('网站访问量数据交互出错！');
 		}
 	});
 }
+

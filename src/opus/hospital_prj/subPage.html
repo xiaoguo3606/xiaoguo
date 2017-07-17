@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>科室排班表</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/ui.css"/>
+	</head>
+	<body>
+		<!--头部-->
+		<div class="top">
+			<div class="wrap">
+				<div class="top_left">010-114/116114电话预约</div>
+				<div class="top_right">
+					<p>欢迎来到城市预约挂号统一平台&nbsp;&nbsp;&nbsp;&nbsp;请</p>&nbsp;&nbsp;
+					&nbsp;&nbsp;
+					<a href="#">登录</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="#">注册</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="#">帮助中心</a>
+				</div>
+			</div>
+		</div>
+		<!--包含logo的header区域-->
+		<div class="header">
+			<div class="wrap">
+				<!--Logo-->
+				<a href="index.html"><img src="img/logo.png"/></a>
+				<!--搜索栏-->
+				<div class="search ui-search">
+					<div class="ui-search-selected">医院</div>
+					<div class="ui-search-select-list">
+						<a href="#">科室</a>
+						<a href="#">疾病</a>
+						<a href="#">医院</a>
+					</div>
+					<input type="text" name="search-content" class="ui-search-input" placeholder="请输入搜索内容" />
+					<a href="#" class="ui-search-submit">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+		<!--导航栏-->
+		<div class="nav">
+			<div class="wrap">
+				<a href="index.html">首页</a>
+				<a href="#">按医院挂号</a>
+				<a href="#">按科室挂号</a>
+				<a href="#">按疾病挂号</a>
+				<a href="#">最新公告</a>
+				<a href="#">社会知名医院</a>
+			</div>
+		</div>
+		<!--主体内容区域-->
+		<div class="content">
+			<div class="wrap">
+				<!--医院信息-->
+				<div class="hospitalInfo">
+					<!--标题-->
+					<div class="info_title">
+						<h3>北京协和医院</h3>
+						<a href="#">关注医院</a>
+						<ul>
+							<li>
+								<span>等级：</span>三级甲等
+							</li>
+							<li>
+								<span>区域：</span>东城区
+							</li>
+							<li>
+								<span>分类：</span>中国医科院所属医院
+							</li>
+						</ul>
+					</div>
+					<!--左图-->
+					<div class="info_img">
+						<img src="img/hospital-1.jpg"/>
+					</div>
+					<!--中间详细信息部分-->
+					<div class="info_detail">
+						<div class="icon_01"></div>
+						<div class="icon_02"></div>
+						<div class="icon_03"></div>
+						<div class="icon_04"></div>
+						<p>[东院]北京市东城区帅府园一号&nbsp;&nbsp;北京西城区大木仓胡同41号</p>
+						<p>http://www.pumch.cn/</p>
+						<p>东院咨询台：010-69155564;西院咨询台：010-65482244</p>
+						<p>东院：106，102，205，154，305路到东单路口北；
+						东院：106，102，205，154，305路到东单路口北；
+						东院：106，102，205，154，305路到东单路口北；
+						东院：106，102，205，154，305路到东单路口北；
+						东院：106，102，205，154，305路到东单路口北。</p>
+					</div>
+					<!--右方地图-->
+					<div class="info_map">
+						<img src="img/map-1.png"/>
+					</div>
+				</div>
+				<!--科室排班表-->
+				<div class="ui-timetable">
+					<!--标题-->
+					<p class="ui-timetable-title">
+						科室排班表<a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;返回科室列表</a>
+					</p>
+					<!--主体内容-->
+					<div class="ui-timetable-content">
+						<!--左侧内容-->
+						<div class="ui-timetable-content-left">
+							<!--左侧中左侧内容-->
+							<div class="ui-timetable-content-left-left">
+								<!--左箭头-->
+								<div class="ui-content-btn-left"></div>
+								<div class="ui-content-time">上午</div>
+								<div class="ui-content-time">下午</div>
+								<div class="ui-content-time">晚上</div>
+							</div>
+							<!--左侧中间内容，包含日期及余号信息-->
+							<div class="ui-timetable-content-left-center">
+								<div class="ui-date-wrap">
+									<div class="ui-oneday">
+										<div class="ui-date"></div>
+										<div class="ui-am"></div>
+										<div class="ui-pm ui-notNull">已满诊
+										</div>
+										<div class="ui-night"></div>
+									</div>
+								</div>
+							</div>
+							<!--左侧右方内容，包含右箭头-->
+							<div class="ui-timetable-content-left-right">
+								<div class="ui-content-btn-right"></div>
+							</div>
+						</div>
+						<!--右侧信息，包含预约规则-->
+						<div class="ui-timetable-content-right">
+							<div>
+								<h1>预约规则</h1>
+								<ul>
+									<li>
+										预约周期：
+										<p>7天</p>
+									<li>
+										放号时间：
+										<p>8：30</p>
+									</li>
+									<li>
+										停挂时间：
+										<p>下午14：00停止次日预约挂号（周五14：00后停挂至下周一）</p>
+									</li>
+									<li>
+										退号时间:
+										<p>就诊前一工作日14：00前取消</p>
+									</li>
+									<li>
+										特殊规则:
+										<p>
+											①&nbsp;&nbsp;取号地点不同：西院预约号取号地点：西院西区诊楼一层大厅挂号窗口取号。 东院预约取号地点：东院区老门诊楼一层大厅挂号窗口或新门诊楼各层挂号/收费窗口联取号。
+										</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!--下方提示信息-->
+						<div class="ui-timetable-content-bottom">
+							<p>您还没有选择就诊日期</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--页脚-->
+		<div class="footer">
+			<p>Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;2017慕课网版权所有</p>
+		</div>
+		<div class="ui-backTop"></div>
+		
+		<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/ui.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

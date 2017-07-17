@@ -1,0 +1,2217 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>慕淘网--作业</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<!--所有内容使用wrap包裹-->
+		<div class="wrap">
+			<!--顶部区域-->
+			<div class="header">
+				<!--顶部区域包裹层-->
+				<div class="header_wrap">
+					<!--左上角区域-->
+					<div class="header_left">
+						<a href="*">亲，请登录</a>
+						<a href="*">免费注册</a>
+						<a href="*">手机逛慕淘</a>
+					</div>
+					<!--右上角区域-->
+					<div id="header_right" class="header_right">
+						<ul>
+							<li><a href="#">我的慕淘</a><span class="header_right_arrow"></span>
+								<!--下拉菜单-->
+								<div class="header_right_hidden">
+									<ul>
+										<li><a href="#">已买到的宝贝</a></li>
+										<li><a href="#">我的足迹</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#">收藏夹</a><span class="header_right_arrow"></span>
+								<!--下拉菜单-->
+								<div class="header_right_hidden">
+									<ul>
+										<li><a href="#">收藏的宝贝</a></li>
+										<li><a href="#">收藏的店铺</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#">商品分类</a></li>
+							<li><a href="#">卖家中心</a><span class="header_right_arrow"></span>
+								<!--下拉菜单-->
+								<div class="header_right_hidden">
+									<ul>
+										<li><a href="#">免费开店</a></li>
+										<li><a href="#">已卖出的宝贝</a></li>
+										<li><a href="#">出售中的宝贝</a></li>
+										<li><a href="#">出售中的宝贝</a></li>
+										<li><a href="#">卖家培训中心</a></li>
+										<li><a href="#">体检中心</a></li>
+										<li><a href="#">问商友</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="#">联系客服</a><span class="header_right_arrow"></span>
+								<!--下拉菜单-->
+								<div class="header_right_hidden">
+									<ul>
+										<li><a href="#">消费者客服</a></li>
+										<li><a href="#">卖家客服</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--登录与注册窗口-->
+			<div class="loginAndRegArea">
+				<!--半透明背景层-->
+				<div class="backLayer"></div>
+				<div class="loginAndReg">
+					<!--标题与关闭按钮-->
+					<div class="LoginTitle">
+						<h3 id="login">登录</h3>
+						<h3 id="reg">注册</h3>
+						<div class="closeButton"></div>
+					</div>
+					<!--登录表单-->
+					<div class="loginInput">
+						<form action="">
+							<input type="text" name="login_username" id="login_username" placeholder="请输入登录邮箱/手机号" /><br />
+							<span id="login_username_info"></span><br />
+							<input type="password" name="login_password" id="login_password" placeholder="6-16位密码，区分大小写，不能用空格" /><br />
+							<span id="login_password_info"></span><br />
+							<input type="checkbox" name="autoLogin" id="autoLogin" value="" checked/><span class="auto_login">下次自动登录</span>
+							<a href="#">忘记密码</a><br />
+							<input type="button" name="login_submit" id="login_submit" value="登录" />
+						</form>
+					</div>
+					<!--注册表单-->
+					<div class="regInput">
+						<form action="">
+							<input type="text" name="reg_username" id="reg_username" placeholder="请输入注册邮箱/手机号" value=""/><br />
+							<span id="reg_username_info"></span><br />
+							<input type="text" name="reg_check_code" id="reg_check_code" placeholder="请输入验证码" /><br />
+							<div class="checkImg"></div>
+							<span id="reg_check_code_info"></span><br />
+							<input type="button" name="login_submit" id="login_submit" value="注册" />
+						</form>
+					</div>
+					<!--3张图片-->
+					<div class="login_icons">
+						<ul>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--logo区域-->
+			<div class="logoArea">
+				<div class="logoArea_wrap">
+					<div class="logoArea_logo"></div>
+					<div class="logoArea_seek">
+						<input type="text" name="seek" id="seek" placeholder="灵魂美食一元抢" />
+						<a id="seek_btn">
+							搜索
+						</a>
+					</div>
+					<!--购物车区域-->
+					<div class="logoArea_shoppingCar">
+						<!--购物车图标及标题-->
+						<div class="shoppingCar_title">
+							<span id="shoppingCar_logo" class="shoppingCar_logo_default"></span>
+							<a href="#">购物车</a>
+							<span id="shoppingCar_num">0</span>
+							<span id="shoppingCar_arrow" class="shoppingCar_arrow_default"></span>
+						</div>
+						<div class="shoppingCar_hidden">
+							<div class="shoppingCar_hidden_title">
+								最新加入的商品
+							</div><hr />
+							<div class="shoppingCar_hidden_goods">
+								<ul>
+									<!--名个商品信息-->
+									<li>
+										<div class="goods_img"><img src="img/cart/1.png"/></div>
+										<div class="goods_title">adidas&nbsp;&nbsp;阿迪达斯&nbsp;&nbsp;训练&nbsp;&nbsp;男子</div>
+										<div class="goods_price">￥335×1</div>
+										<div class="goods_remove">×</div>
+									</li><hr />
+									<li>
+										<div class="goods_img"><img src="img/cart/2.png"/></div>
+										<div class="goods_title">玉兰油多效修复三步曲套装</div>
+										<div class="goods_price">￥199×2</div>
+										<div class="goods_remove">×</div>
+									</li><hr />
+									<li>
+										<div class="goods_img"><img src="img/cart/3.png"/></div>
+										<div class="goods_title">Apple&nbsp;iPhone&nbsp;7(A1660)</div>
+										<div class="goods_price">￥6188×1</div>
+										<div class="goods_remove">×</div>
+									</li><hr />
+									<li>
+										<div class="goods_img"><img src="img/cart/4.png"/></div>
+										<div class="goods_title">飞利浦面条机&nbsp;&nbsp;HR2356/31</div>
+										<div class="goods_price">￥659×4</div>
+										<div class="goods_remove">×</div>
+									</li><hr />
+									<li>
+										<div class="goods_img"><img src="img/cart/5.png"/></div>
+										<div class="goods_title">罗技G29&nbsp;&nbsp;力反馈游戏手柄</div>
+										<div class="goods_price">￥2999×1</div>
+										<div class="goods_remove">×</div>
+									</li><hr />
+									<li>
+										<div class="goods_img"><img src="img/cart/book.jpg"/></div>
+										<div class="goods_title">编程原理&nbsp;&nbsp;经典书籍系列</div>
+										<div class="goods_price">￥98.9×1</div>
+										<div class="goods_remove">×</div>
+									</li><hr />
+								</ul>
+							</div>
+							<hr />
+							<!--商品总计及去购物车按钮-->
+							<div class="shoppingCar_hidden_account">
+								共<span id="goods_count">6</span>件商品&nbsp;&nbsp;共计：￥<span id="goods_count_money">0.0</span>元
+								<a href="#">去购物车</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--导航区域-->
+			<div class="nav">
+				<div class="nav_wrap">
+					<ul>
+						<li><a href="#">数码城</a></li>
+						<li><a href="#">天黑黑</a></li>
+						<li><a href="#">团购</a></li>
+						<li><a href="#">发现</a></li>
+						<li><a href="#">二手特价</a></li>
+						<li><a href="#">名品会</a></li>
+					</ul>
+				</div>
+			</div>
+			<!--banner区域-->
+			<div class="banner">
+				<div class="banner_left">
+					<ul>
+						<li id="banner_left_title"><a href="#">商品分类</a></li>
+						<li><a href="#">家用电器</a><img src="img/icon/23.png"/>
+							<div class="sub_item">
+								<dl>
+									<dt><a href="#">空调</a></dt>
+									<dd>
+										<a href="#">格力</a>
+										<a href="#">美的</a>
+										<a href="#">松下</a>
+										<a href="#">奥克斯</a>
+										<a href="#">TCL</a>
+										<a href="#">长虹</a>
+										<a href="#">长虹</a>
+										<a href="#">长虹</a>
+										<a href="#">长虹</a>
+										<a href="#">长虹</a>
+										<a href="#">长虹</a>
+										<a href="#">长虹</a>
+										<a href="#">海尔</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">空调</a></dt>
+									<dd>
+										<a href="#">格力</a>
+										<a href="#">美的</a>
+										<a href="#">松下</a>
+										<a href="#">奥克斯</a>
+										<a href="#">TCL</a>
+										<a href="#">长虹</a>
+										<a href="#">长虹</a>
+										<a href="#">长虹</a>
+										<a href="#">长虹</a>
+										<a href="#">长虹</a>
+										<a href="#">长虹</a>
+										<a href="#">长虹</a>
+										<a href="#">海尔</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">空调</a></dt>
+									<dd>
+										<a href="#">格力</a>
+										<a href="#">美的</a>
+										<a href="#">松下</a>
+										<a href="#">奥克斯</a>
+										<a href="#">TCL</a>
+										<a href="#">长虹</a>
+										<a href="#">长虹</a>
+										<a href="#">长虹</a>
+										<a href="#">长虹</a>
+										<a href="#">长虹</a>
+										<a href="#">长虹</a>
+										<a href="#">长虹</a>
+										<a href="#">海尔</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">空调</a></dt>
+									<dd>
+										<a href="#">格力</a>
+										<a href="#">美的</a>
+										<a href="#">松下</a>
+										<a href="#">奥克斯</a>
+										<a href="#">TCL</a>
+										<a href="#">长虹</a>
+										<a href="#">长虹</a>
+										<a href="#">长虹</a>
+										<a href="#">长虹</a>
+										<a href="#">长虹</a>
+										<a href="#">长虹</a>
+										<a href="#">长虹</a>
+										<a href="#">海尔</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">空调</a></dt>
+									<dd>
+										<a href="#">格力</a>
+										<a href="#">美的</a>
+										<a href="#">松下</a>
+										<a href="#">奥克斯</a>
+										<a href="#">TCL</a>
+										<a href="#">长虹</a>
+										<a href="#">长虹</a>
+										<a href="#">长虹</a>
+										<a href="#">长虹</a>
+										<a href="#">长虹</a>
+										<a href="#">长虹</a>
+										<a href="#">长虹</a>
+										<a href="#">海尔</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li><a href="#">手机、运营商、数码</a><img src="img/icon/23.png"/>
+							<div class="sub_item">
+								<dl>
+									<dt><a href="#">手机</a></dt>
+									<dd>
+										<a href="#">苹果</a>
+										<a href="#">三星</a>
+										<a href="#">华为</a>
+										<a href="#">锤子</a>
+										<a href="#">HTC</a>
+										<a href="#">小米</a>
+										<a href="#">Nokia</a>
+										<a href="#">小牛</a>
+										<a href="#">LG</a>
+										<a href="#">小米</a>
+										<a href="#">Nokia</a>
+										<a href="#">小牛</a>
+										<a href="#">LG</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">手机</a></dt>
+									<dd>
+										<a href="#">苹果</a>
+										<a href="#">三星</a>
+										<a href="#">华为</a>
+										<a href="#">锤子</a>
+										<a href="#">HTC</a>
+										<a href="#">小米</a>
+										<a href="#">Nokia</a>
+										<a href="#">小牛</a>
+										<a href="#">LG</a>
+										<a href="#">小米</a>
+										<a href="#">Nokia</a>
+										<a href="#">小牛</a>
+										<a href="#">LG</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">手机</a></dt>
+									<dd>
+										<a href="#">苹果</a>
+										<a href="#">三星</a>
+										<a href="#">华为</a>
+										<a href="#">锤子</a>
+										<a href="#">HTC</a>
+										<a href="#">小米</a>
+										<a href="#">Nokia</a>
+										<a href="#">小牛</a>
+										<a href="#">LG</a>
+										<a href="#">小米</a>
+										<a href="#">Nokia</a>
+										<a href="#">小牛</a>
+										<a href="#">LG</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">手机</a></dt>
+									<dd>
+										<a href="#">苹果</a>
+										<a href="#">三星</a>
+										<a href="#">华为</a>
+										<a href="#">锤子</a>
+										<a href="#">HTC</a>
+										<a href="#">小米</a>
+										<a href="#">Nokia</a>
+										<a href="#">小牛</a>
+										<a href="#">LG</a>
+										<a href="#">小米</a>
+										<a href="#">Nokia</a>
+										<a href="#">小牛</a>
+										<a href="#">LG</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">手机</a></dt>
+									<dd>
+										<a href="#">苹果</a>
+										<a href="#">三星</a>
+										<a href="#">华为</a>
+										<a href="#">锤子</a>
+										<a href="#">HTC</a>
+										<a href="#">小米</a>
+										<a href="#">Nokia</a>
+										<a href="#">小牛</a>
+										<a href="#">LG</a>
+										<a href="#">小米</a>
+										<a href="#">Nokia</a>
+										<a href="#">小牛</a>
+										<a href="#">LG</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li><a href="#">电脑、办公</a><img src="img/icon/23.png"/>
+							<div class="sub_item">
+								<dl>
+									<dt><a href="#">电脑</a></dt>
+									<dd>
+										<a href="#">联想台式机</a>
+										<a href="#">联想笔记本</a>
+										<a href="#">苹果台式机</a>
+										<a href="#">苹果笔记本</a>
+										<a href="#">三星台式机</a>
+										<a href="#">三星笔记本</a>
+										<a href="#">DELL台式机</a>
+										<a href="#">DELL笔记本</a>
+										<a href="#">HP台式机</a>
+										<a href="#">HP笔记本</a>
+										<a href="#">小米笔记本</a>
+										<a href="#">东芝笔记本</a>
+										<a href="#">品牌组装台式机</a>
+										<a href="#">其它品牌</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">电脑</a></dt>
+									<dd>
+										<a href="#">联想台式机</a>
+										<a href="#">联想笔记本</a>
+										<a href="#">苹果台式机</a>
+										<a href="#">苹果笔记本</a>
+										<a href="#">三星台式机</a>
+										<a href="#">三星笔记本</a>
+										<a href="#">DELL台式机</a>
+										<a href="#">DELL笔记本</a>
+										<a href="#">HP台式机</a>
+										<a href="#">HP笔记本</a>
+										<a href="#">小米笔记本</a>
+										<a href="#">东芝笔记本</a>
+										<a href="#">品牌组装台式机</a>
+										<a href="#">其它品牌</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">电脑</a></dt>
+									<dd>
+										<a href="#">联想台式机</a>
+										<a href="#">联想笔记本</a>
+										<a href="#">苹果台式机</a>
+										<a href="#">苹果笔记本</a>
+										<a href="#">三星台式机</a>
+										<a href="#">三星笔记本</a>
+										<a href="#">DELL台式机</a>
+										<a href="#">DELL笔记本</a>
+										<a href="#">HP台式机</a>
+										<a href="#">HP笔记本</a>
+										<a href="#">小米笔记本</a>
+										<a href="#">东芝笔记本</a>
+										<a href="#">品牌组装台式机</a>
+										<a href="#">其它品牌</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">电脑</a></dt>
+									<dd>
+										<a href="#">联想台式机</a>
+										<a href="#">联想笔记本</a>
+										<a href="#">苹果台式机</a>
+										<a href="#">苹果笔记本</a>
+										<a href="#">三星台式机</a>
+										<a href="#">三星笔记本</a>
+										<a href="#">DELL台式机</a>
+										<a href="#">DELL笔记本</a>
+										<a href="#">HP台式机</a>
+										<a href="#">HP笔记本</a>
+										<a href="#">小米笔记本</a>
+										<a href="#">东芝笔记本</a>
+										<a href="#">品牌组装台式机</a>
+										<a href="#">其它品牌</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li><a href="#">家居、家具、家装、厨具</a><img src="img/icon/23.png"/>
+							<div class="sub_item">
+								<dl>
+									<dt><a href="#">家居</a></dt>
+									<dd>
+										<a href="#">洗护用品</a>
+										<a href="#">大家具</a>
+										<a href="#">小家具</a>
+										<a href="#">厨房用品</a>
+										<a href="#">洗护用品</a>
+										<a href="#">大家具</a>
+										<a href="#">小家具</a>
+										<a href="#">厨房用品</a>
+										<a href="#">洗护用品</a>
+										<a href="#">大家具</a>
+										<a href="#">小家具</a>
+										<a href="#">厨房用品</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">家居</a></dt>
+									<dd>
+										<a href="#">洗护用品</a>
+										<a href="#">大家具</a>
+										<a href="#">小家具</a>
+										<a href="#">厨房用品</a>
+										<a href="#">洗护用品</a>
+										<a href="#">大家具</a>
+										<a href="#">小家具</a>
+										<a href="#">厨房用品</a>
+										<a href="#">洗护用品</a>
+										<a href="#">大家具</a>
+										<a href="#">小家具</a>
+										<a href="#">厨房用品</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">家居</a></dt>
+									<dd>
+										<a href="#">洗护用品</a>
+										<a href="#">大家具</a>
+										<a href="#">小家具</a>
+										<a href="#">厨房用品</a>
+										<a href="#">洗护用品</a>
+										<a href="#">大家具</a>
+										<a href="#">小家具</a>
+										<a href="#">厨房用品</a>
+										<a href="#">洗护用品</a>
+										<a href="#">大家具</a>
+										<a href="#">小家具</a>
+										<a href="#">厨房用品</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">家居</a></dt>
+									<dd>
+										<a href="#">洗护用品</a>
+										<a href="#">大家具</a>
+										<a href="#">小家具</a>
+										<a href="#">厨房用品</a>
+										<a href="#">洗护用品</a>
+										<a href="#">大家具</a>
+										<a href="#">小家具</a>
+										<a href="#">厨房用品</a>
+										<a href="#">洗护用品</a>
+										<a href="#">大家具</a>
+										<a href="#">小家具</a>
+										<a href="#">厨房用品</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">家居</a></dt>
+									<dd>
+										<a href="#">洗护用品</a>
+										<a href="#">大家具</a>
+										<a href="#">小家具</a>
+										<a href="#">厨房用品</a>
+										<a href="#">洗护用品</a>
+										<a href="#">大家具</a>
+										<a href="#">小家具</a>
+										<a href="#">厨房用品</a>
+										<a href="#">洗护用品</a>
+										<a href="#">大家具</a>
+										<a href="#">小家具</a>
+										<a href="#">厨房用品</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li><a href="#">男装、女装、童装、内衣</a><img src="img/icon/23.png"/>
+							<div class="sub_item">
+								<dl>
+									<dt><a href="#">服装</a></dt>
+									<dd>
+										<a href="#">男士运动</a>
+										<a href="#">男士绅士</a>
+										<a href="#">男士内衣</a>
+										<a href="#">男士皮鞋</a>
+										<a href="#">男士腰带</a>
+										<a href="#">女士服装</a>
+										<a href="#">女士运动</a>
+										<a href="#">女士内衣</a>
+										<a href="#">女士配饰</a>
+										<a href="#">儿童服装</a>
+										<a href="#">儿童鞋</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">服装</a></dt>
+									<dd>
+										<a href="#">男士运动</a>
+										<a href="#">男士绅士</a>
+										<a href="#">男士内衣</a>
+										<a href="#">男士皮鞋</a>
+										<a href="#">男士腰带</a>
+										<a href="#">女士服装</a>
+										<a href="#">女士运动</a>
+										<a href="#">女士内衣</a>
+										<a href="#">女士配饰</a>
+										<a href="#">儿童服装</a>
+										<a href="#">儿童鞋</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">服装</a></dt>
+									<dd>
+										<a href="#">男士运动</a>
+										<a href="#">男士绅士</a>
+										<a href="#">男士内衣</a>
+										<a href="#">男士皮鞋</a>
+										<a href="#">男士腰带</a>
+										<a href="#">女士服装</a>
+										<a href="#">女士运动</a>
+										<a href="#">女士内衣</a>
+										<a href="#">女士配饰</a>
+										<a href="#">儿童服装</a>
+										<a href="#">儿童鞋</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">服装</a></dt>
+									<dd>
+										<a href="#">男士运动</a>
+										<a href="#">男士绅士</a>
+										<a href="#">男士内衣</a>
+										<a href="#">男士皮鞋</a>
+										<a href="#">男士腰带</a>
+										<a href="#">女士服装</a>
+										<a href="#">女士运动</a>
+										<a href="#">女士内衣</a>
+										<a href="#">女士配饰</a>
+										<a href="#">儿童服装</a>
+										<a href="#">儿童鞋</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">服装</a></dt>
+									<dd>
+										<a href="#">男士运动</a>
+										<a href="#">男士绅士</a>
+										<a href="#">男士内衣</a>
+										<a href="#">男士皮鞋</a>
+										<a href="#">男士腰带</a>
+										<a href="#">女士服装</a>
+										<a href="#">女士运动</a>
+										<a href="#">女士内衣</a>
+										<a href="#">女士配饰</a>
+										<a href="#">儿童服装</a>
+										<a href="#">儿童鞋</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li><a href="#">化妆、清洁、宠物</a><img src="img/icon/23.png"/>
+							<div class="sub_item">
+								<dl>
+									<dt><a href="#">宠物</a></dt>
+									<dd>
+										<a href="#">宠物食品</a>
+										<a href="#">宠物美容</a>
+										<a href="#">宠物玩具</a>
+										<a href="#">宠物服饰</a>
+										<a href="#">宠物医疗</a>
+										<a href="#">宠物洗护用品</a>
+										<a href="#">宠物洗护服务</a>
+										<a href="#">宠物摄影</a>
+										<a href="#">宠物服饰</a>
+										<a href="#">宠物医疗</a>
+										<a href="#">宠物洗护用品</a>
+										<a href="#">宠物洗护服务</a>
+										<a href="#">宠物摄影</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">宠物</a></dt>
+									<dd>
+										<a href="#">宠物食品</a>
+										<a href="#">宠物美容</a>
+										<a href="#">宠物玩具</a>
+										<a href="#">宠物服饰</a>
+										<a href="#">宠物医疗</a>
+										<a href="#">宠物洗护用品</a>
+										<a href="#">宠物洗护服务</a>
+										<a href="#">宠物摄影</a>
+										<a href="#">宠物服饰</a>
+										<a href="#">宠物医疗</a>
+										<a href="#">宠物洗护用品</a>
+										<a href="#">宠物洗护服务</a>
+										<a href="#">宠物摄影</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">宠物</a></dt>
+									<dd>
+										<a href="#">宠物食品</a>
+										<a href="#">宠物美容</a>
+										<a href="#">宠物玩具</a>
+										<a href="#">宠物服饰</a>
+										<a href="#">宠物医疗</a>
+										<a href="#">宠物洗护用品</a>
+										<a href="#">宠物洗护服务</a>
+										<a href="#">宠物摄影</a>
+										<a href="#">宠物服饰</a>
+										<a href="#">宠物医疗</a>
+										<a href="#">宠物洗护用品</a>
+										<a href="#">宠物洗护服务</a>
+										<a href="#">宠物摄影</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">宠物</a></dt>
+									<dd>
+										<a href="#">宠物食品</a>
+										<a href="#">宠物美容</a>
+										<a href="#">宠物玩具</a>
+										<a href="#">宠物服饰</a>
+										<a href="#">宠物医疗</a>
+										<a href="#">宠物洗护用品</a>
+										<a href="#">宠物洗护服务</a>
+										<a href="#">宠物摄影</a>
+										<a href="#">宠物服饰</a>
+										<a href="#">宠物医疗</a>
+										<a href="#">宠物洗护用品</a>
+										<a href="#">宠物洗护服务</a>
+										<a href="#">宠物摄影</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">宠物</a></dt>
+									<dd>
+										<a href="#">宠物食品</a>
+										<a href="#">宠物美容</a>
+										<a href="#">宠物玩具</a>
+										<a href="#">宠物服饰</a>
+										<a href="#">宠物医疗</a>
+										<a href="#">宠物洗护用品</a>
+										<a href="#">宠物洗护服务</a>
+										<a href="#">宠物摄影</a>
+										<a href="#">宠物服饰</a>
+										<a href="#">宠物医疗</a>
+										<a href="#">宠物洗护用品</a>
+										<a href="#">宠物洗护服务</a>
+										<a href="#">宠物摄影</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li><a href="#">运动、户外、钟表</a><img src="img/icon/23.png"/>
+							<div class="sub_item">
+								<dl>
+									<dt><a href="#">运动户外</a></dt>
+									<dd>
+										<a href="#">运动服装-男</a>
+										<a href="#">运动服装-女</a>
+										<a href="#">运动鞋-男</a>
+										<a href="#">运动鞋-女</a>
+										<a href="#">运动护具</a>
+										<a href="#">篮球</a>
+										<a href="#">足球</a>
+										<a href="#">乒乓球</a>
+										<a href="#">羽毛球</a>
+										<a href="#">网球</a>
+										<a href="#">排球</a>
+										<a href="#">健身器材</a>
+										<a href="#">瑜伽相关</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">运动户外</a></dt>
+									<dd>
+										<a href="#">运动服装-男</a>
+										<a href="#">运动服装-女</a>
+										<a href="#">运动鞋-男</a>
+										<a href="#">运动鞋-女</a>
+										<a href="#">运动护具</a>
+										<a href="#">篮球</a>
+										<a href="#">足球</a>
+										<a href="#">乒乓球</a>
+										<a href="#">羽毛球</a>
+										<a href="#">网球</a>
+										<a href="#">排球</a>
+										<a href="#">健身器材</a>
+										<a href="#">瑜伽相关</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">运动户外</a></dt>
+									<dd>
+										<a href="#">运动服装-男</a>
+										<a href="#">运动服装-女</a>
+										<a href="#">运动鞋-男</a>
+										<a href="#">运动鞋-女</a>
+										<a href="#">运动护具</a>
+										<a href="#">篮球</a>
+										<a href="#">足球</a>
+										<a href="#">乒乓球</a>
+										<a href="#">羽毛球</a>
+										<a href="#">网球</a>
+										<a href="#">排球</a>
+										<a href="#">健身器材</a>
+										<a href="#">瑜伽相关</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">运动户外</a></dt>
+									<dd>
+										<a href="#">运动服装-男</a>
+										<a href="#">运动服装-女</a>
+										<a href="#">运动鞋-男</a>
+										<a href="#">运动鞋-女</a>
+										<a href="#">运动护具</a>
+										<a href="#">篮球</a>
+										<a href="#">足球</a>
+										<a href="#">乒乓球</a>
+										<a href="#">羽毛球</a>
+										<a href="#">网球</a>
+										<a href="#">排球</a>
+										<a href="#">健身器材</a>
+										<a href="#">瑜伽相关</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">运动户外</a></dt>
+									<dd>
+										<a href="#">运动服装-男</a>
+										<a href="#">运动服装-女</a>
+										<a href="#">运动鞋-男</a>
+										<a href="#">运动鞋-女</a>
+										<a href="#">运动护具</a>
+										<a href="#">篮球</a>
+										<a href="#">足球</a>
+										<a href="#">乒乓球</a>
+										<a href="#">羽毛球</a>
+										<a href="#">网球</a>
+										<a href="#">排球</a>
+										<a href="#">健身器材</a>
+										<a href="#">瑜伽相关</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li><a href="#">汽车、汽车用品</a><img src="img/icon/23.png"/>
+							<div class="sub_item">
+								<dl>
+									<dt><a href="#">汽车用品</a></dt>
+									<dd>
+										<a href="#">汽车座垫</a>
+										<a href="#">车载灭火器</a>
+										<a href="#">胎压检测仪</a>
+										<a href="#">汽车贴纸</a>
+										<a href="#">车载冰箱</a>
+										<a href="#">车载电源适配器</a>
+										<a href="#">汽车千斤顶</a>
+										<a href="#">备胎</a>
+										<a href="#">汽车护理服务</a>
+										<a href="#">汽车保养</a>
+										<a href="#">汽车美容</a>
+										<a href="#">汽车除味</a>
+										<a href="#">汽车配件</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">汽车用品</a></dt>
+									<dd>
+										<a href="#">汽车座垫</a>
+										<a href="#">车载灭火器</a>
+										<a href="#">胎压检测仪</a>
+										<a href="#">汽车贴纸</a>
+										<a href="#">车载冰箱</a>
+										<a href="#">车载电源适配器</a>
+										<a href="#">汽车千斤顶</a>
+										<a href="#">备胎</a>
+										<a href="#">汽车护理服务</a>
+										<a href="#">汽车保养</a>
+										<a href="#">汽车美容</a>
+										<a href="#">汽车除味</a>
+										<a href="#">汽车配件</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">汽车用品</a></dt>
+									<dd>
+										<a href="#">汽车座垫</a>
+										<a href="#">车载灭火器</a>
+										<a href="#">胎压检测仪</a>
+										<a href="#">汽车贴纸</a>
+										<a href="#">车载冰箱</a>
+										<a href="#">车载电源适配器</a>
+										<a href="#">汽车千斤顶</a>
+										<a href="#">备胎</a>
+										<a href="#">汽车护理服务</a>
+										<a href="#">汽车保养</a>
+										<a href="#">汽车美容</a>
+										<a href="#">汽车除味</a>
+										<a href="#">汽车配件</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">汽车用品</a></dt>
+									<dd>
+										<a href="#">汽车座垫</a>
+										<a href="#">车载灭火器</a>
+										<a href="#">胎压检测仪</a>
+										<a href="#">汽车贴纸</a>
+										<a href="#">车载冰箱</a>
+										<a href="#">车载电源适配器</a>
+										<a href="#">汽车千斤顶</a>
+										<a href="#">备胎</a>
+										<a href="#">汽车护理服务</a>
+										<a href="#">汽车保养</a>
+										<a href="#">汽车美容</a>
+										<a href="#">汽车除味</a>
+										<a href="#">汽车配件</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">汽车用品</a></dt>
+									<dd>
+										<a href="#">汽车座垫</a>
+										<a href="#">车载灭火器</a>
+										<a href="#">胎压检测仪</a>
+										<a href="#">汽车贴纸</a>
+										<a href="#">车载冰箱</a>
+										<a href="#">车载电源适配器</a>
+										<a href="#">汽车千斤顶</a>
+										<a href="#">备胎</a>
+										<a href="#">汽车护理服务</a>
+										<a href="#">汽车保养</a>
+										<a href="#">汽车美容</a>
+										<a href="#">汽车除味</a>
+										<a href="#">汽车配件</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li><a href="#">母婴、玩具乐器</a><img src="img/icon/23.png"/>
+							<div class="sub_item">
+								<dl>
+									<dt><a href="#">母婴用品</a></dt>
+									<dd>
+										<a href="#">婴儿尿布</a>
+										<a href="#">婴儿奶粉</a>
+										<a href="#">婴儿DHA</a>
+										<a href="#">婴儿奶瓶</a>
+										<a href="#">婴儿床</a>
+										<a href="#">婴儿推车</a>
+										<a href="#">婴幼儿玩具</a>
+										<a href="#">1-2岁玩具</a>
+										<a href="#">2-3岁玩具</a>
+										<a href="#">3-5岁玩具</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">母婴用品</a></dt>
+									<dd>
+										<a href="#">婴儿尿布</a>
+										<a href="#">婴儿奶粉</a>
+										<a href="#">婴儿DHA</a>
+										<a href="#">婴儿奶瓶</a>
+										<a href="#">婴儿床</a>
+										<a href="#">婴儿推车</a>
+										<a href="#">婴幼儿玩具</a>
+										<a href="#">1-2岁玩具</a>
+										<a href="#">2-3岁玩具</a>
+										<a href="#">3-5岁玩具</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">母婴用品</a></dt>
+									<dd>
+										<a href="#">婴儿尿布</a>
+										<a href="#">婴儿奶粉</a>
+										<a href="#">婴儿DHA</a>
+										<a href="#">婴儿奶瓶</a>
+										<a href="#">婴儿床</a>
+										<a href="#">婴儿推车</a>
+										<a href="#">婴幼儿玩具</a>
+										<a href="#">1-2岁玩具</a>
+										<a href="#">2-3岁玩具</a>
+										<a href="#">3-5岁玩具</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">母婴用品</a></dt>
+									<dd>
+										<a href="#">婴儿尿布</a>
+										<a href="#">婴儿奶粉</a>
+										<a href="#">婴儿DHA</a>
+										<a href="#">婴儿奶瓶</a>
+										<a href="#">婴儿床</a>
+										<a href="#">婴儿推车</a>
+										<a href="#">婴幼儿玩具</a>
+										<a href="#">1-2岁玩具</a>
+										<a href="#">2-3岁玩具</a>
+										<a href="#">3-5岁玩具</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">母婴用品</a></dt>
+									<dd>
+										<a href="#">婴儿尿布</a>
+										<a href="#">婴儿奶粉</a>
+										<a href="#">婴儿DHA</a>
+										<a href="#">婴儿奶瓶</a>
+										<a href="#">婴儿床</a>
+										<a href="#">婴儿推车</a>
+										<a href="#">婴幼儿玩具</a>
+										<a href="#">1-2岁玩具</a>
+										<a href="#">2-3岁玩具</a>
+										<a href="#">3-5岁玩具</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li><a href="#">食品、酒类、生鲜、特产</a><img src="img/icon/23.png"/>
+							<div class="sub_item">
+								<dl>
+									<dt><a href="#">食品</a></dt>
+									<dd>
+										<a href="#">小吃</a>
+										<a href="#">零食</a>
+										<a href="#">糕点</a>
+										<a href="#">饮料</a>
+										<a href="#">冷冻</a>
+										<a href="#">食材</a>
+										<a href="#">小吃</a>
+										<a href="#">零食</a>
+										<a href="#">糕点</a>
+										<a href="#">饮料</a>
+										<a href="#">冷冻</a>
+										<a href="#">食材</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">食品</a></dt>
+									<dd>
+										<a href="#">小吃</a>
+										<a href="#">零食</a>
+										<a href="#">糕点</a>
+										<a href="#">饮料</a>
+										<a href="#">冷冻</a>
+										<a href="#">食材</a>
+										<a href="#">小吃</a>
+										<a href="#">零食</a>
+										<a href="#">糕点</a>
+										<a href="#">饮料</a>
+										<a href="#">冷冻</a>
+										<a href="#">食材</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">食品</a></dt>
+									<dd>
+										<a href="#">小吃</a>
+										<a href="#">零食</a>
+										<a href="#">糕点</a>
+										<a href="#">饮料</a>
+										<a href="#">冷冻</a>
+										<a href="#">食材</a>
+										<a href="#">小吃</a>
+										<a href="#">零食</a>
+										<a href="#">糕点</a>
+										<a href="#">饮料</a>
+										<a href="#">冷冻</a>
+										<a href="#">食材</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">食品</a></dt>
+									<dd>
+										<a href="#">小吃</a>
+										<a href="#">零食</a>
+										<a href="#">糕点</a>
+										<a href="#">饮料</a>
+										<a href="#">冷冻</a>
+										<a href="#">食材</a>
+										<a href="#">小吃</a>
+										<a href="#">零食</a>
+										<a href="#">糕点</a>
+										<a href="#">饮料</a>
+										<a href="#">冷冻</a>
+										<a href="#">食材</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">食品</a></dt>
+									<dd>
+										<a href="#">小吃</a>
+										<a href="#">零食</a>
+										<a href="#">糕点</a>
+										<a href="#">饮料</a>
+										<a href="#">冷冻</a>
+										<a href="#">食材</a>
+										<a href="#">小吃</a>
+										<a href="#">零食</a>
+										<a href="#">糕点</a>
+										<a href="#">饮料</a>
+										<a href="#">冷冻</a>
+										<a href="#">食材</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li><a href="#">医疗保健</a><img src="img/icon/23.png"/>
+							<div class="sub_item">
+								<dl>
+									<dt><a href="#">医疗保健</a></dt>
+									<dd>
+										<a href="#">药品</a>
+										<a href="#">医疗器械</a>
+										<a href="#">健身器材</a>
+										<a href="#">保健品</a>
+										<a href="#">药品</a>
+										<a href="#">医疗器械</a>
+										<a href="#">健身器材</a>
+										<a href="#">保健品</a>
+										<a href="#">药品</a>
+										<a href="#">医疗器械</a>
+										<a href="#">健身器材</a>
+										<a href="#">保健品</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">医疗保健</a></dt>
+									<dd>
+										<a href="#">药品</a>
+										<a href="#">医疗器械</a>
+										<a href="#">健身器材</a>
+										<a href="#">保健品</a>
+										<a href="#">药品</a>
+										<a href="#">医疗器械</a>
+										<a href="#">健身器材</a>
+										<a href="#">保健品</a>
+										<a href="#">药品</a>
+										<a href="#">医疗器械</a>
+										<a href="#">健身器材</a>
+										<a href="#">保健品</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">医疗保健</a></dt>
+									<dd>
+										<a href="#">药品</a>
+										<a href="#">医疗器械</a>
+										<a href="#">健身器材</a>
+										<a href="#">保健品</a>
+										<a href="#">药品</a>
+										<a href="#">医疗器械</a>
+										<a href="#">健身器材</a>
+										<a href="#">保健品</a>
+										<a href="#">药品</a>
+										<a href="#">医疗器械</a>
+										<a href="#">健身器材</a>
+										<a href="#">保健品</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">医疗保健</a></dt>
+									<dd>
+										<a href="#">药品</a>
+										<a href="#">医疗器械</a>
+										<a href="#">健身器材</a>
+										<a href="#">保健品</a>
+										<a href="#">药品</a>
+										<a href="#">医疗器械</a>
+										<a href="#">健身器材</a>
+										<a href="#">保健品</a>
+										<a href="#">药品</a>
+										<a href="#">医疗器械</a>
+										<a href="#">健身器材</a>
+										<a href="#">保健品</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">医疗保健</a></dt>
+									<dd>
+										<a href="#">药品</a>
+										<a href="#">医疗器械</a>
+										<a href="#">健身器材</a>
+										<a href="#">保健品</a>
+										<a href="#">药品</a>
+										<a href="#">医疗器械</a>
+										<a href="#">健身器材</a>
+										<a href="#">保健品</a>
+										<a href="#">药品</a>
+										<a href="#">医疗器械</a>
+										<a href="#">健身器材</a>
+										<a href="#">保健品</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">医疗保健</a></dt>
+									<dd>
+										<a href="#">药品</a>
+										<a href="#">医疗器械</a>
+										<a href="#">健身器材</a>
+										<a href="#">保健品</a>
+										<a href="#">药品</a>
+										<a href="#">医疗器械</a>
+										<a href="#">健身器材</a>
+										<a href="#">保健品</a>
+										<a href="#">药品</a>
+										<a href="#">医疗器械</a>
+										<a href="#">健身器材</a>
+										<a href="#">保健品</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li><a href="#">图书、音响、电子书</a><img src="img/icon/23.png"/>
+							<div class="sub_item">
+								<dl>
+									<dt><a href="#">图书</a></dt>
+									<dd>
+										<a href="#">JAVA开发</a>
+										<a href="#">WEB开发</a>
+										<a href="#">前端开发</a>
+										<a href="#">PHP开发</a>
+										<a href="#">JAVA开发</a>
+										<a href="#">WEB开发</a>
+										<a href="#">前端开发</a>
+										<a href="#">PHP开发</a>
+										<a href="#">JAVA开发</a>
+										<a href="#">WEB开发</a>
+										<a href="#">前端开发</a>
+										<a href="#">PHP开发</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">图书</a></dt>
+									<dd>
+										<a href="#">JAVA开发</a>
+										<a href="#">WEB开发</a>
+										<a href="#">前端开发</a>
+										<a href="#">PHP开发</a>
+										<a href="#">JAVA开发</a>
+										<a href="#">WEB开发</a>
+										<a href="#">前端开发</a>
+										<a href="#">PHP开发</a>
+										<a href="#">JAVA开发</a>
+										<a href="#">WEB开发</a>
+										<a href="#">前端开发</a>
+										<a href="#">PHP开发</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">图书</a></dt>
+									<dd>
+										<a href="#">JAVA开发</a>
+										<a href="#">WEB开发</a>
+										<a href="#">前端开发</a>
+										<a href="#">PHP开发</a>
+										<a href="#">JAVA开发</a>
+										<a href="#">WEB开发</a>
+										<a href="#">前端开发</a>
+										<a href="#">PHP开发</a>
+										<a href="#">JAVA开发</a>
+										<a href="#">WEB开发</a>
+										<a href="#">前端开发</a>
+										<a href="#">PHP开发</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">图书</a></dt>
+									<dd>
+										<a href="#">JAVA开发</a>
+										<a href="#">WEB开发</a>
+										<a href="#">前端开发</a>
+										<a href="#">PHP开发</a>
+										<a href="#">JAVA开发</a>
+										<a href="#">WEB开发</a>
+										<a href="#">前端开发</a>
+										<a href="#">PHP开发</a>
+										<a href="#">JAVA开发</a>
+										<a href="#">WEB开发</a>
+										<a href="#">前端开发</a>
+										<a href="#">PHP开发</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">图书</a></dt>
+									<dd>
+										<a href="#">JAVA开发</a>
+										<a href="#">WEB开发</a>
+										<a href="#">前端开发</a>
+										<a href="#">PHP开发</a>
+										<a href="#">JAVA开发</a>
+										<a href="#">WEB开发</a>
+										<a href="#">前端开发</a>
+										<a href="#">PHP开发</a>
+										<a href="#">JAVA开发</a>
+										<a href="#">WEB开发</a>
+										<a href="#">前端开发</a>
+										<a href="#">PHP开发</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">图书</a></dt>
+									<dd>
+										<a href="#">JAVA开发</a>
+										<a href="#">WEB开发</a>
+										<a href="#">前端开发</a>
+										<a href="#">PHP开发</a>
+										<a href="#">JAVA开发</a>
+										<a href="#">WEB开发</a>
+										<a href="#">前端开发</a>
+										<a href="#">PHP开发</a>
+										<a href="#">JAVA开发</a>
+										<a href="#">WEB开发</a>
+										<a href="#">前端开发</a>
+										<a href="#">PHP开发</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li><a href="#">彩票、旅行、充值、票务</a><img src="img/icon/23.png"/>
+							<div class="sub_item">
+								<dl>
+									<dt><a href="#">彩票</a></dt>
+									<dd>
+										<a href="#">双色球</a>
+										<a href="#">大乐透</a>
+										<a href="#">双色球</a>
+										<a href="#">大乐透</a>
+										<a href="#">双色球</a>
+										<a href="#">大乐透</a>
+										<a href="#">双色球</a>
+										<a href="#">大乐透</a>
+										<a href="#">双色球</a>
+										<a href="#">大乐透</a>
+										<a href="#">双色球</a>
+										<a href="#">大乐透</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">彩票</a></dt>
+									<dd>
+										<a href="#">双色球</a>
+										<a href="#">大乐透</a>
+										<a href="#">双色球</a>
+										<a href="#">大乐透</a>
+										<a href="#">双色球</a>
+										<a href="#">大乐透</a>
+										<a href="#">双色球</a>
+										<a href="#">大乐透</a>
+										<a href="#">双色球</a>
+										<a href="#">大乐透</a>
+										<a href="#">双色球</a>
+										<a href="#">大乐透</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">彩票</a></dt>
+									<dd>
+										<a href="#">双色球</a>
+										<a href="#">大乐透</a>
+										<a href="#">双色球</a>
+										<a href="#">大乐透</a>
+										<a href="#">双色球</a>
+										<a href="#">大乐透</a>
+										<a href="#">双色球</a>
+										<a href="#">大乐透</a>
+										<a href="#">双色球</a>
+										<a href="#">大乐透</a>
+										<a href="#">双色球</a>
+										<a href="#">大乐透</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">彩票</a></dt>
+									<dd>
+										<a href="#">双色球</a>
+										<a href="#">大乐透</a>
+										<a href="#">双色球</a>
+										<a href="#">大乐透</a>
+										<a href="#">双色球</a>
+										<a href="#">大乐透</a>
+										<a href="#">双色球</a>
+										<a href="#">大乐透</a>
+										<a href="#">双色球</a>
+										<a href="#">大乐透</a>
+										<a href="#">双色球</a>
+										<a href="#">大乐透</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">彩票</a></dt>
+									<dd>
+										<a href="#">双色球</a>
+										<a href="#">大乐透</a>
+										<a href="#">双色球</a>
+										<a href="#">大乐透</a>
+										<a href="#">双色球</a>
+										<a href="#">大乐透</a>
+										<a href="#">双色球</a>
+										<a href="#">大乐透</a>
+										<a href="#">双色球</a>
+										<a href="#">大乐透</a>
+										<a href="#">双色球</a>
+										<a href="#">大乐透</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+						<li><a href="#">理财、众筹、白条、保险</a><img src="img/icon/23.png"/>
+							<div class="sub_item">
+								<dl>
+									<dt><a href="#">理财</a></dt>
+									<dd>
+										<a href="#">余额宝</a>
+										<a href="#">理财通</a>
+										<a href="#">挖财宝</a>
+										<a href="#">余额宝</a>
+										<a href="#">理财通</a>
+										<a href="#">挖财宝</a>
+										<a href="#">余额宝</a>
+										<a href="#">理财通</a>
+										<a href="#">挖财宝</a>
+										<a href="#">余额宝</a>
+										<a href="#">理财通</a>
+										<a href="#">挖财宝</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">理财</a></dt>
+									<dd>
+										<a href="#">余额宝</a>
+										<a href="#">理财通</a>
+										<a href="#">挖财宝</a>
+										<a href="#">余额宝</a>
+										<a href="#">理财通</a>
+										<a href="#">挖财宝</a>
+										<a href="#">余额宝</a>
+										<a href="#">理财通</a>
+										<a href="#">挖财宝</a>
+										<a href="#">余额宝</a>
+										<a href="#">理财通</a>
+										<a href="#">挖财宝</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">理财</a></dt>
+									<dd>
+										<a href="#">余额宝</a>
+										<a href="#">理财通</a>
+										<a href="#">挖财宝</a>
+										<a href="#">余额宝</a>
+										<a href="#">理财通</a>
+										<a href="#">挖财宝</a>
+										<a href="#">余额宝</a>
+										<a href="#">理财通</a>
+										<a href="#">挖财宝</a>
+										<a href="#">余额宝</a>
+										<a href="#">理财通</a>
+										<a href="#">挖财宝</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">理财</a></dt>
+									<dd>
+										<a href="#">余额宝</a>
+										<a href="#">理财通</a>
+										<a href="#">挖财宝</a>
+										<a href="#">余额宝</a>
+										<a href="#">理财通</a>
+										<a href="#">挖财宝</a>
+										<a href="#">余额宝</a>
+										<a href="#">理财通</a>
+										<a href="#">挖财宝</a>
+										<a href="#">余额宝</a>
+										<a href="#">理财通</a>
+										<a href="#">挖财宝</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">理财</a></dt>
+									<dd>
+										<a href="#">余额宝</a>
+										<a href="#">理财通</a>
+										<a href="#">挖财宝</a>
+										<a href="#">余额宝</a>
+										<a href="#">理财通</a>
+										<a href="#">挖财宝</a>
+										<a href="#">余额宝</a>
+										<a href="#">理财通</a>
+										<a href="#">挖财宝</a>
+										<a href="#">余额宝</a>
+										<a href="#">理财通</a>
+										<a href="#">挖财宝</a>
+									</dd>
+								</dl>
+								<dl>
+									<dt><a href="#">理财</a></dt>
+									<dd>
+										<a href="#">余额宝</a>
+										<a href="#">理财通</a>
+										<a href="#">挖财宝</a>
+										<a href="#">余额宝</a>
+										<a href="#">理财通</a>
+										<a href="#">挖财宝</a>
+										<a href="#">余额宝</a>
+										<a href="#">理财通</a>
+										<a href="#">挖财宝</a>
+										<a href="#">余额宝</a>
+										<a href="#">理财通</a>
+										<a href="#">挖财宝</a>
+									</dd>
+								</dl>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="banner_center">
+					<div class="img_btn">
+						<div id="prev"></div>
+						<div id="next"></div>
+					</div>
+					<div class="points">
+						<div class="current_point"></div>
+						<div class="default_point"></div>
+						<div class="default_point"></div>
+						<div class="default_point"></div>
+						<div class="default_point"></div>
+						<div class="default_point"></div>
+					</div>
+					<img class="current_img" src="img/focus-carousel/1.png"/>
+					<img class="default_img" src="img/focus-carousel/2.jpg"/>
+					<img class="default_img" src="img/focus-carousel/3.jpg"/>
+					<img class="default_img" src="img/focus-carousel/4.jpg"/>
+					<img class="default_img" src="img/focus-carousel/5.jpg"/>
+					<img class="default_img" src="img/focus-carousel/6.jpg"/>
+				</div>
+				<div class="banner_right">
+					<div class="news">
+						<h4>慕快报</h4>
+						<span id="more"><a href="#">更多></a></span>
+						<p><a href="#"><b>[特惠]</b>&nbsp;&nbsp;精选图书每满150减50</a></p>
+						<p><a href="#"><b>[公告]</b>&nbsp;&nbsp;因广东图书仓库升级配货延迟</a></p>
+						<p><a href="#"><b>[特惠]</b>&nbsp;&nbsp;爆款手机12期免息&nbsp;抽奖赢电视</a></p>
+						<p><a href="#"><b>[公告]</b>&nbsp;&nbsp;广东、福建受台风影响配送延迟</a></p>
+						<p><a href="#"><b>[特惠]</b>&nbsp;&nbsp;大闸蟹领券满388减150</a></p>
+					</div>
+					<div class="blocks">
+						<a href="#">话费</a>
+						<a href="#">机票</a>
+						<a href="#">电影票</a>
+						<a href="#">游戏</a>
+						<a href="#">彩票</a>
+						<a href="#">加油卡</a>
+						<a href="#">酒店</a>
+						<a href="#">火车票</a>
+						<a href="#">众筹</a>
+						<a href="#">理财</a>
+						<a href="#">礼品卡</a>
+						<a href="#">白条</a>
+					</div>
+					<img src="img/ad.png"/>
+				</div>
+			</div>
+			<!--楼层区域-->
+			<div class="floor">
+				<div class="sub_floor" id="f1">
+					<div class="sub_floor_title">
+						<span>1F</span>&nbsp;&nbsp;
+						<h3>服装鞋包</h3>
+					</div>
+					<div class="sub_floor_select">
+						<span>大牌</span>
+						<span>男装</span>
+						<span>女装</span>
+					</div>
+					<div class="sub_floor_goods_wrap">
+						<div class="sub_floor_goods goods_1_1">
+							<div class="sub_floor_line">
+								<div class="line_left"></div>
+								<div class="line_arrow"></div>
+								<div class="line_right"></div>
+							</div>
+							<div class="sub_floor_goods_list">
+								<ul>
+									<li>
+										<img src="img/floor/1.png" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/1.png" />
+										<a href="#">adidas&nbsp;阿迪达斯&nbsp;训练&nbsp;男子</a><br />
+										<span>￥335</span>
+									</li>
+									<li>
+										<img src="img/floor/1.jpg" />
+										<a href="#">必迈BMAI一体织跑步短袖T恤</a><br />
+										<span>￥159</span>
+									</li>
+									<li>
+										<img src="img/floor/1.jpg" />
+										<a href="#">NBA袜子半毛圈运动高邦棉袜</a><br />
+										<span>￥69</span>
+									</li>
+									<li>
+										<img src="img/floor/1.png" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/1.png" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/2.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/2.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/1.png" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/1.png" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/3.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/3.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="sub_floor_goods goods_1_2">
+							<div class="sub_floor_line">
+								<div class="line_left"></div>
+								<div class="line_arrow"></div>
+								<div class="line_right"></div>
+							</div>
+							<div class="sub_floor_goods_list">
+								<ul>
+									<li>
+										<img src="img/floor/2.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="sub_floor_goods goods_1_3">
+							<div class="sub_floor_line">
+								<div class="line_left"></div>
+								<div class="line_arrow"></div>
+								<div class="line_right"></div>
+							</div>
+							<div class="sub_floor_goods_list">
+								<ul>
+									<li>
+										<img src="img/floor/4.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sub_floor" id="f2">
+					<div class="sub_floor_title">
+						<span>2F</span>&nbsp;&nbsp;
+						<h3>个护美妆</h3>
+					</div>
+					<div class="sub_floor_select">
+						<span>热门</span>
+						<span>国际大牌</span>
+						<span>国际名站</span>
+					</div>
+					<div class="sub_floor_goods_wrap">
+						<div class="sub_floor_goods goods_2_1">
+							<div class="sub_floor_line">
+								<div class="line_left"></div>
+								<div class="line_arrow"></div>
+								<div class="line_right"></div>
+							</div>
+							<div class="sub_floor_goods_list">
+								<ul>
+									<li>
+										<img src="img/floor/4.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/4.jpg" />
+										<a href="#">adidas&nbsp;阿迪达斯&nbsp;训练&nbsp;男子</a><br />
+										<span>￥335</span>
+									</li>
+									<li>
+										<img src="img/floor/4.jpg" />
+										<a href="#">必迈BMAI一体织跑步短袖T恤</a><br />
+										<span>￥159</span>
+									</li>
+									<li>
+										<img src="img/floor/4.jpg" />
+										<a href="#">NBA袜子半毛圈运动高邦棉袜</a><br />
+										<span>￥69</span>
+									</li>
+									<li>
+										<img src="img/floor/4.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/4.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/5.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/5.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/5.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/5.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/5.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/5.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="sub_floor_goods goods_2_2">
+							<div class="sub_floor_line">
+								<div class="line_left"></div>
+								<div class="line_arrow"></div>
+								<div class="line_right"></div>
+							</div>
+							<div class="sub_floor_goods_list">
+								<ul>
+									<li>
+										<img src="img/floor/2.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="sub_floor_goods goods_2_3">
+							<div class="sub_floor_line">
+								<div class="line_left"></div>
+								<div class="line_arrow"></div>
+								<div class="line_right"></div>
+							</div>
+							<div class="sub_floor_goods_list">
+								<ul>
+									<li>
+										<img src="img/floor/4.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sub_floor" id="f3">
+					<div class="sub_floor_title">
+						<span>3F</span>&nbsp;&nbsp;
+						<h3>手机通讯</h3>
+					</div>
+					<div class="sub_floor_select">
+						<span>热门</span>
+						<span>品质优选</span>
+						<span>新机尝鲜</span>
+					</div>
+					<div class="sub_floor_goods_wrap">
+						<div class="sub_floor_goods goods_3_1">
+							<div class="sub_floor_line">
+								<div class="line_left"></div>
+								<div class="line_arrow"></div>
+								<div class="line_right"></div>
+							</div>
+							<div class="sub_floor_goods_list">
+								<ul>
+									<li>
+										<img src="img/floor/7.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/7.jpg" />
+										<a href="#">adidas&nbsp;阿迪达斯&nbsp;训练&nbsp;男子</a><br />
+										<span>￥335</span>
+									</li>
+									<li>
+										<img src="img/floor/7.jpg" />
+										<a href="#">必迈BMAI一体织跑步短袖T恤</a><br />
+										<span>￥159</span>
+									</li>
+									<li>
+										<img src="img/floor/7.jpg" />
+										<a href="#">NBA袜子半毛圈运动高邦棉袜</a><br />
+										<span>￥69</span>
+									</li>
+									<li>
+										<img src="img/floor/7.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/7.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/7.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/7.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/7.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/7.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/7.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/7.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="sub_floor_goods goods_3_2">
+							<div class="sub_floor_line">
+								<div class="line_left"></div>
+								<div class="line_arrow"></div>
+								<div class="line_right"></div>
+							</div>
+							<div class="sub_floor_goods_list">
+								<ul>
+									<li>
+										<img src="img/floor/7.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="sub_floor_goods goods_3_3">
+							<div class="sub_floor_line">
+								<div class="line_left"></div>
+								<div class="line_arrow"></div>
+								<div class="line_right"></div>
+							</div>
+							<div class="sub_floor_goods_list">
+								<ul>
+									<li>
+										<img src="img/floor/4.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sub_floor" id="f4">
+					<div class="sub_floor_title">
+						<span>4F</span>&nbsp;&nbsp;
+						<h3>家用电器</h3>
+					</div>
+					<div class="sub_floor_select">
+						<span>热门</span>
+						<span>大家电</span>
+						<span>生活电器</span>
+					</div>
+					<div class="sub_floor_goods_wrap">
+						<div class="sub_floor_goods goods_4_1">
+							<div class="sub_floor_line">
+								<div class="line_left"></div>
+								<div class="line_arrow"></div>
+								<div class="line_right"></div>
+							</div>
+							<div class="sub_floor_goods_list">
+								<ul>
+									<li>
+										<img src="img/floor/8.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/8.jpg" />
+										<a href="#">adidas&nbsp;阿迪达斯&nbsp;训练&nbsp;男子</a><br />
+										<span>￥335</span>
+									</li>
+									<li>
+										<img src="img/floor/8.jpg" />
+										<a href="#">必迈BMAI一体织跑步短袖T恤</a><br />
+										<span>￥159</span>
+									</li>
+									<li>
+										<img src="img/floor/8.jpg" />
+										<a href="#">NBA袜子半毛圈运动高邦棉袜</a><br />
+										<span>￥69</span>
+									</li>
+									<li>
+										<img src="img/floor/8.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/8.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/8.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/8.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/8.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/8.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/8.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/8.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="sub_floor_goods goods_4_2">
+							<div class="sub_floor_line">
+								<div class="line_left"></div>
+								<div class="line_arrow"></div>
+								<div class="line_right"></div>
+							</div>
+							<div class="sub_floor_goods_list">
+								<ul>
+									<li>
+										<img src="img/floor/8.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="sub_floor_goods goods_4_3">
+							<div class="sub_floor_line">
+								<div class="line_left"></div>
+								<div class="line_arrow"></div>
+								<div class="line_right"></div>
+							</div>
+							<div class="sub_floor_goods_list">
+								<ul>
+									<li>
+										<img src="img/floor/8-1.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sub_floor" id="f5">
+					<div class="sub_floor_title">
+						<span>5F</span>&nbsp;&nbsp;
+						<h3>电脑数码</h3>
+					</div>
+					<div class="sub_floor_select">
+						<span>热门</span>
+						<span>电脑/平板</span>
+						<span>潮流影音</span>
+					</div>
+					<div class="sub_floor_goods_wrap">
+						<div class="sub_floor_goods goods_5_1">
+							<div class="sub_floor_line">
+								<div class="line_left"></div>
+								<div class="line_arrow"></div>
+								<div class="line_right"></div>
+							</div>
+							<div class="sub_floor_goods_list">
+								<ul>
+									<li>
+										<img src="img/floor/9.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/9.jpg" />
+										<a href="#">adidas&nbsp;阿迪达斯&nbsp;训练&nbsp;男子</a><br />
+										<span>￥335</span>
+									</li>
+									<li>
+										<img src="img/floor/9.jpg" />
+										<a href="#">必迈BMAI一体织跑步短袖T恤</a><br />
+										<span>￥159</span>
+									</li>
+									<li>
+										<img src="img/floor/9.jpg" />
+										<a href="#">NBA袜子半毛圈运动高邦棉袜</a><br />
+										<span>￥69</span>
+									</li>
+									<li>
+										<img src="img/floor/9.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/9.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/9.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/9.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/9.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/9.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/9.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+									<li>
+										<img src="img/floor/9.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="sub_floor_goods goods_5_2">
+							<div class="sub_floor_line">
+								<div class="line_left"></div>
+								<div class="line_arrow"></div>
+								<div class="line_right"></div>
+							</div>
+							<div class="sub_floor_goods_list">
+								<ul>
+									<li>
+										<img src="img/floor/9.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="sub_floor_goods goods_5_3">
+							<div class="sub_floor_line">
+								<div class="line_left"></div>
+								<div class="line_arrow"></div>
+								<div class="line_right"></div>
+							</div>
+							<div class="sub_floor_goods_list">
+								<ul>
+									<li>
+										<img src="img/floor/4.jpg" />
+										<a href="#">匡威男棒球衫外套2015</a><br />
+										<span>￥479</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--页面左侧楼层导航-->
+			<div class="floor_nav">
+				<a href="#f1" class="current_anchor">服装</a>
+				<a href="#f2">F2</a>
+				<a href="#f3">F3</a>
+				<a href="#f4">F4</a>
+				<a href="#f5">F5</a>
+			</div>
+			<!--页面右侧导航按钮-->
+			<div class="right_nav">
+				<div class="right_nav_icons">
+					<div><img src="img/icon/13.png" /></div>
+					<div><img src="img/icon/14.png" /></div>
+					<div><img src="img/icon/15.png" /></div>
+					<div><img src="img/icon/16.png" /></div>
+					<div><img src="img/icon/17.png" /></div>
+				</div>
+				<div class="right_nav_icon_info">
+					<div>会员</div>
+					<div>购物车</div>
+					<div>我的关注</div>
+					<div>我的消息</div>
+					<div>顶部</div>
+				</div>
+			</div>
+			<!--友情链接区域-->
+			<div class="linkArea">
+				<dl>
+					<dt>消费者保障</dt>
+					<dd><a href="#">保障范围</a></dd>
+					<dd><a href="#">退货退款流程</a></dd>
+					<dd><a href="#">服务中心</a></dd>
+					<dd><a href="#">更多特色服务</a></dd>
+				</dl><!--去掉dl之间的间隙
+			--><dl>
+					<dt>新手上路</dt>
+					<dd><a href="#">新手专区</a></dd>
+					<dd><a href="#">消费警示</a></dd>
+					<dd><a href="#">交易安全</a></dd>
+					<dd><a href="#">24小时在线帮助</a></dd>
+					<dd><a href="#">免费开店</a></dd>
+				</dl><!--去掉dl之间的间隙
+			--><dl>
+					<dt>付款方式</dt>
+					<dd><a href="#">快捷支付</a></dd>
+					<dd><a href="#">信用卡</a></dd>
+					<dd><a href="#">余额宝</a></dd>
+					<dd><a href="#">蜜蜂花啊</a></dd>
+					<dd><a href="#">货到付款</a></dd>
+				</dl><!--去掉dl之间的间隙
+			--><dl>
+					<dt>慕淘特色</dt>
+					<dd><a href="#">手机慕淘</a></dd>
+					<dd><a href="#">慕淘信</a></dd>
+					<dd><a href="#">大众评审</a></dd>
+					<dd><a href="#">B格指南</a></dd>
+				</dl>
+			</div>
+			<!--页脚区域-->
+			<div class="footer">
+				<ul>
+					<li><a href="#">关于慕淘</a></li>
+					<li><a href="#">合作伙伴</a></li>
+					<li><a href="#">营销中心</a></li>
+					<li><a href="#">廉政举报</a></li>
+					<li><a href="#">联系客服</a></li>
+					<li><a href="#">开放平台</a></li>
+					<li><a href="#">诚征英才</a></li>
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">网站地图</a></li>
+					<li><a href="#">法律声明</a></li>
+					<li><a href="#">知识产权</a></li>
+				</ul>
+				<p>&copy;&nbsp;2016&nbsp;imooc.com&nbsp;All&nbsp;Right&nbsp;Reserved</p>
+			</div>
+		</div>
+		
+		<!--导入script文件-->
+		<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

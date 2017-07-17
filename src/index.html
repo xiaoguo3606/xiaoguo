@@ -22,7 +22,8 @@
 	<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
 	<!--引入main.css-->
 	<link rel="stylesheet" type="text/css" href="css/main.css"/>
-	
+	<!--引入clipboard，用于将指定内容复制到剪切板-->
+	<script src="vendor/clipboard/clipboard.min.js" type="text/javascript" charset="utf-8"></script>
 	
 </head>
 <body>
@@ -74,7 +75,7 @@
 	</header>
 	
 	<!--主体-->
-	<div class="content" id="content">
+	<div class="main-content" id="content">
 		
 		<!--首页-->
 		<section class="header text-center section">
@@ -204,7 +205,7 @@
 		<section class="skill other-skill text-center section">
 			<div>
 				<h1 title="更多黑技能。这也许就是我的特别之处。">其它技能</h1>
-				<p class="someWords">“热爱学习的我，技能当然特别多。”</p>
+				<p class="someWords">“热爱学习的我，黑技能当然特别多。”</p>
 				<div class="slide">
 					<h4><span class="badge">1/4</span>&nbsp;后端</h4>
 					<img src="img/java_and_other.png" alt="java and other skills" />
@@ -247,17 +248,106 @@
 		</section>
 		<!--作品-->
 		<section class="my-opus text-center section">
-			<h1>作品</h1>
-			<p class="someWords">“没有最好的作品，只有更好的作品。”</p>
+			<div class="container-fluid">
+				<h1>作品</h1>
+				<p class="someWords">“没有最好的作品，只有更好的作品。”</p>
+				<ul class="row">
+					<li class="col-md-4 col-sm-4 col-xs-12">
+						<a href="opus/shopping_prj/index.html" target="_blank" class="my-opus-link">
+							<img src="img/shopping_website.png" alt="仿电商网站" />
+							<div class="black_bg"></div>
+							<div class="black_bg_link">
+								<h3><span class="fa fa-link"></span>&nbsp;电商网站主页</h3>
+								<p>99%还原设计稿</p>
+							</div>
+							<div class="mobile">
+								<h4>电商网站主页</h4>
+								<p>99%还原设计稿。</p>
+							</div>
+						</a>
+					</li>
+					<li class="col-md-4 col-sm-4 col-xs-12">
+						<a href="opus/hospital_prj/subPage.html" class="my-opus-link">
+							<img src="img/hospital.png" alt="仿医院挂号系统" />
+							<div class="black_bg"></div>
+							<div class="black_bg_link">
+								<h3><span class="fa fa-link"></span>&nbsp;医院挂号系统</h3>
+								<p>精确到1px</p>
+							</div>
+							<div class="mobile">
+								<h4>医院挂号系统</h4>
+								<p>精确到1px。</p>
+							</div>
+						</a>
+					</li>
+					<li class="col-md-4 col-sm-4 col-xs-12">
+						<a href="opus/2048_prj/index.html" class="my-opus-link">
+							<img src="img/2048.png" alt="仿2048网页版游戏" />
+							<div class="black_bg"></div>
+							<div class="black_bg_link">
+								<h3><span class="fa fa-link"></span>&nbsp;2048游戏网页版</h3>
+								<p>烧脑的JS</p>
+							</div>
+							<div class="mobile">
+								<h4>2048游戏网页版</h4>
+								<p>烧脑的JS。</p>
+							</div>
+						</a>
+					</li>
+					<li class="col-md-12 col-sm-12 col-xs-12 this-web">
+						<span class="fa fa-github"></span>&nbsp;本站已于Github开源，
+						<a href="https://github.com/xiaoguo3606/xiaoguo" target="_blank">
+							点击前往&nbsp;<span class="fa fa-angle-double-right"></span>
+						</a>
+					</li>
+				</ul>
+			</div>
 		</section>
 		<!--联系我-->
 		<section class="contact text-center section">
 			<h1>联系我</h1>
-			<p class="someWords">“我没有退路，只有一往无前。”</p>
+			<p class="someWords">“我没有退路，只能一往无前。”</p>
+			<div id="contact-me-content" class="text-left container">
+				<h3>如果您是一位招聘者</h3>
+				<div>
+					<p>希望您能够给努力者一个机会，下面的邮箱可以联系到我：</p>
+					<div>
+						<span class="fa fa-envelope"></span>
+						<span id="my-email">285726161@qq.com</span>&nbsp;&nbsp;
+						<span id="copy-email" data-clipboard-target="#my-email">
+							<span class="fa fa-clone"></span>&nbsp;复制
+						</span>
+					</div>
+				</div>
+				<h3>如果您也是一位学习前端的朋友</h3>
+				<div>
+					<p>“三人行，必有我师。”</p>
+					<p>我非常希望能够交到更多的朋友，一起学习，一起进步！</p>
+					<div class="contact-info">
+						<a href="http://weibo.com/xiaoguo3606" target="_blank" class="weibo"></a>
+						<a href="https://github.com/xiaoguo3606" target="_blank" class="github"></a>
+					</div>
+					
+				</div>
+				<h3>当然，您也可以直接给我留言</h3>
+				<div>
+					<form action="" class="form-horizontal">
+						<input type="text" placeholder="您的称呼" class="form-control" name="guest-name" id="guest-name"/>
+						<p class="validate-info" id="guest-name-info">&nbsp;</p>
+						<input type="text" placeholder="您的邮箱" class="form-control" name="guest-email" id="guest-email"/>
+						<p class="validate-info" id="guest-email-info">&nbsp;</p>
+						<textarea name="message" rows="3" cols="" class="form-control" placeholder="您输入您想说的话" name="guest-msg" id="guest-msg"></textarea>
+						<p class="validate-info" id="guest-msg-info">&nbsp;</p>
+						<button type="button" class="form-control">发表留言</button>
+					</form>
+				</div>
+			</div>
+			
+			
 			<!--页脚,备案信息-->
 			<footer>
 				<div>
-					<p><b>蜀ICP备17022701号-1</b></p>
+					<p><b>蜀ICP备17022701号-1</b>&nbsp;<span id="guest_count"></span></p>
 					<p>Copyright&nbsp;&copy;&nbsp;2017&nbsp;xiaoguo.pro&nbsp;All&nbsp;Rights&nbsp;Reserved</p>
 				</div>
 			</footer>
@@ -280,6 +370,7 @@
 	<!--引入fullpage-->
 	<script src="vendor/fullpage/jquery.fullpage.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="vendor/fullpage/scrolloverflow.min.js" type="text/javascript" charset="utf-8"></script>
+	
 	<!--自定义JS文件-->
 	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
 	<!--引入有字库字体，全文通用字体-->

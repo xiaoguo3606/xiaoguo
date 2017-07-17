@@ -1,0 +1,334 @@
+/*格式化*/
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	font-family: "微软雅黑";
+	min-width: 1000px;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+/*顶部区域*/
+.top{
+	width: 100%;
+	background: #f5f5f5;
+	height: 30px;
+	line-height: 30px;
+}
+/*宽度为1000px/居中显示的类*/
+.wrap{
+	width: 1000px;
+	margin: 0 auto;
+}
+.top_left{
+	float: left;
+	color: #777;
+	font-size: 12px;
+	padding-left: 20px;
+	background: url(../img/icon-call.png) center left no-repeat;
+}
+.top_right{
+	float: right;
+	font-size: 12px;
+}
+.top_right p{
+	margin: 0;
+	display: inline-block;
+	color: #777;
+}
+.top_right a{
+	color: #2da5e1;
+}
+
+/*头部区域,包含LOGO和搜索栏*/
+.header{
+	width: 100%;
+	height: 90px;
+}
+.header>a{
+	display: inline-block;
+	float: left;
+	margin-top: 2px;
+}
+.header>.wrap>a>img{
+	width: 420px;
+	height: 86px;
+}
+	/*搜索区域，其它样式在ui.css中定义*/
+.search{
+	width: 326px;
+	height: 38px;
+	float: right;
+	border-radius: 5px;
+	margin-top: 26px;
+	background: url(../img/ui-search.jpg) no-repeat;
+}
+
+/*导航区域*/
+.nav{
+	width: 100%;
+	height: 36px;
+	background: #60bff2;
+	line-height: 36px;
+}
+.nav a{
+	font-size: 18px;
+	color: #fff;
+	display: inline-block;
+	margin-left: 50px;
+}
+.nav a:last-child{
+	float: right;
+}
+.nav a:hover{
+	color: #d7f3ff;
+}
+
+/*医院信息*/
+.hospitalInfo{
+	height: 260px;
+	width: 960px;
+	padding: 0 20px;
+	margin: 50px 0;
+	background: #F7F7F7;
+	position: relative;
+}
+.hospitalInfo .info_title{
+	box-sizing: border-box;
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid #dcdddd;
+}
+.info_title h3{
+	margin: 0;
+	font-weight: normal;
+	font-size: 16px;
+	display: inline-block;
+}
+.info_title a{
+	font-size: 12px;
+	color: #f29600;
+}
+.info_title ul{
+	display: inline-block;
+	float: right;
+}
+.info_title ul li{
+	display: inline-block;
+	font-size: 12px;
+}
+.info_title ul li span{
+	color: blue;
+}
+.info_img{
+	width: 200px;
+	height: 150px;
+	position: absolute;
+	left: 20px;
+	top: 70px;
+}
+.info_detail{
+	position: absolute;
+	left: 240px;
+	top: 70px;
+	width: 450px;
+}
+.icon_01,.icon_02,.icon_03,.icon_04{
+	position: absolute;
+	left: 10px;
+	width: 16px;
+	height: 16px;
+}
+	/*设置详细信息中每一项前方的图标*/
+.icon_01{
+	top: 8px;
+	background: url(../img/icon-web.png) no-repeat;
+}
+.icon_02{
+	top: 35px;
+	background: url(../img/icon-web.png) 0 -22px no-repeat;
+}
+.icon_03{
+	top: 60px;
+	background: url(../img/icon-web.png) 0 -44px no-repeat;
+}
+.icon_04{
+	top: 88px;
+	background: url(../img/icon-web.png) 0 -64px no-repeat;
+}
+.info_detail p{
+	margin: 5px 0 10px;
+	font-size: 13px;
+	padding-left: 35px;
+}
+.info_map{
+	position: absolute;
+	right: 20px;
+	top: 70px;
+}
+.info_map img{
+	width: 250px;
+	height: 166px;
+}
+
+/*主体区域*/
+.content{
+	overflow: hidden;
+}
+.open_room{
+	float: left;
+	width: 710px;
+	height: 405px;
+}
+.open_room .title{
+	width: 710px;
+	height: 45px;
+	background: #f4f6fa;
+	line-height: 45px;
+	text-indent: 2em;
+	font-size: 16px;
+}
+.open_room_content{
+	width: 710px;
+	height: 90px;
+}
+.open_room_content_class{
+	width: 145px;
+	height: 80px;
+	background: #f2fbff;
+	text-align: center;
+	line-height: 30px;
+	float: left;
+	padding-top: 10px;
+}
+.open_room_content_content{
+	width: 565px;
+	height: 80px;
+	padding-top: 10px;
+	float: left;
+	box-shadow: 0 0 0 1px #f7f7f7 inset;
+}
+.open_room_content_content a{
+	display: inline-block;
+	width: 125px;
+	height: 25px;
+	line-height: 25px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #000;
+	margin-left: 10px;
+}
+.ui-system-content .rule{
+	float: right;
+	width: 270px;
+	height: 280px;
+}
+.ui-system-content .rule .title{
+	width: 270px;
+	height: 45px;
+	background: #f4f6fa;
+	line-height: 45px;
+	text-indent: 0.5em;
+	font-size: 16px;
+}
+.ui-system-content .rule .title span{
+	font-size: 12px;
+	color: #00b3ea;
+}
+.rule_content{
+	height: 280px;
+	overflow: auto;
+}
+.rule_content ul{
+	padding: 20px 10px;
+}
+.rule_content li{
+	width: 100%;
+	clear: both;
+}
+.rule_content li div,.rule_content li p{
+	line-height: 30px;
+}
+.rule_content li div{
+	float: left;
+	font-weight: bold;
+	width: 60px;
+}
+.rule_content li p{
+	float: right;
+	width: 160px;
+}
+
+/*设置每一个选项卡内容的主要样式*/
+.hospitalSystem .ui-system-content:nth-child(3),
+.hospitalSystem .ui-system-content:nth-child(4),
+.hospitalSystem .ui-system-content:nth-child(5){
+	padding: 10px;
+}
+.hospitalSystem .ui-system-content:nth-child(3) h1,
+.hospitalSystem .ui-system-content:nth-child(4) h1,
+.hospitalSystem .ui-system-content:nth-child(5) h1{
+	text-align: center;
+	margin: 10px 0 30px;
+}
+.hospitalSystem .ui-system-content:nth-child(3) p,
+.hospitalSystem .ui-system-content:nth-child(4) p{
+	text-indent: 2em;
+	font-size: 16px;
+	line-height: 2em;
+	margin: 10px 0;
+}
+.hospitalSystem .ui-system-content:nth-child(5) table{
+	width: 100%;
+	line-height: 40px;
+	font-size: 16px;
+	text-align: center;
+}
+.hospitalSystem .ui-system-content:nth-child(5) table td{
+	box-shadow: 0 0 1px #aaa;
+}
+.hospitalSystem .ui-system-content:nth-child(6){
+	width: 100%;
+	height: 200px;
+	margin: 80px 0 200px;
+	text-align: center;
+	line-height: 200px;
+	font-size: 18px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.hospitalSystem .ui-system-content:nth-child(6) input{
+	height: 30px;
+	font-size: 18px;
+	box-sizing: border-box;
+}
+.hospitalSystem .ui-system-content:nth-child(6) a{
+	padding: 0 20px;
+	background: #60bff2;
+	font-size: 14px;
+	color: #fff;
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	margin-left: -5px;
+}
+
+/*页脚区域*/
+.footer{
+	clear: both;
+	text-align: center;
+	height: 100px;
+	line-height: 100px;
+	background: #eceef2;
+	margin-top: 50px;
+	font-size: 10px;
+	color: #acacac;
+}

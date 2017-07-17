@@ -114,7 +114,7 @@ a:hover,a:active{
 	margin: 0.1rem auto;
 	width: 1.5rem;
 }
-.content .header>div>h1{
+.header>div>h1{
 	line-height: 400%;
 }
 .header h2{
@@ -213,64 +213,194 @@ a:hover,a:active{
 	margin-top: 0.2rem;
 	margin-bottom: 0.2rem;
 }
-.slide>div{
-	padding-top: 0;
-}
 .fp-tableCell{
 	vertical-align: top;
 }
 .fp-tableCell h4{
-	margin-top: 0.7rem;
+	margin-top: 0.5rem;
 }
+
 @media only screen and (max-width: 480px) {
 	.fp-tableCell h4{
-		margin-top: 0.3rem;
+		margin-top: 0.4rem;
 	}
 	.skill img{
 		width: 65%;
-		/*margin-top: -1rem;*/
-		margin-bottom: 1rem;
+		margin-bottom: 0.2rem;
 	}
 	.skill-text{
 		width: 70%;
-		margin-top: -0.8rem;
+	}
+}
+
+.my-opus{
+	background: #eef;
+}
+.container-fluid{
+	height: 100%;
+	position: relative;
+}
+.my-opus ul{
+	position: absolute;
+	left: 0;
+	top: 35%;
+}
+.my-opus li.this-web{
+	margin: 0.3rem 0;
+	font-size: 0.2rem;
+}
+.my-opus li.this-web a:hover{
+	text-decoration: none;
+}
+
+.my-opus a.my-opus-link{
+	display: inline-block;
+	width: 80%;
+	position: relative;
+}
+
+.my-opus a.my-opus-link img{
+	width: 100%;
+	border: 0.05rem solid #fff;
+	box-shadow: 0 0 0.05rem #ccc;
+}
+.my-opus .black_bg{
+	background: #000;
+	opacity: 0.5;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.my-opus .black_bg_link{
+	color: #fff;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	margin-top: -0.22rem;
+	display: none;
+}
+.my-opus .black_bg_link h3{
+	font-size: 0.2rem;
+	margin: 0;
+}
+.my-opus .black_bg_link p{
+	margin: 0;
+}
+.my-opus .mobile{
+	display: none;
+}
+@media only screen and (max-width:768px ) {
+	.my-opus ul{
+		overflow: auto;
+		position: absolute;
+		left: 0;
+		top: 1rem;
+		height: 80%;
+		margin-bottom: 0.5rem;
+	}
+	.my-opus li{
+		margin-bottom: 0.2rem;
+	}
+	.my-opus .mobile{
+		display: block;
+		background: rgba(255,255,255,0.9);
+		color: #000;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		z-index: 2;
+	}
+	.my-opus .mobile h4{
+		margin-top: 0.1rem;
+		margin-bottom: 0;
+	}
+	.my-opus .mobile p{
+		margin-bottom: 0;
+	}
+	.my-opus .this-web{
+		display: none;
 	}
 }
 
 
 
 
+.contact{
+	background: #ADD8E6;
+	padding-bottom: 0.7rem;
+}
+#contact-me-content{
+	margin: 0 auto;
+	font-size: 0.16rem;
+}
+#contact-me-content h3{
+	font-size: 0.2rem;
+}
+#copy-email{
+	display: inline-block;
+	width: 0.8rem;
+	height: 0.2rem;
+	line-height: 0.2rem;
+	text-align: center;
+	cursor: pointer;
+	font-size: 0.12rem;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	background: #eee;
+}
 
+.weibo,.github{
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	background-size: 100px 100px;
+}
+.contact-info{
+	width: 100%;
+	text-align: center;
+}
+.weibo{
+	background-image: url(../img/weibo_nocolor.png);
+}
+.weibo:hover{
+	background-image: url(../img/weibo_color.png);
+}
 
+.github{
+	background-image: url(../img/github_nocolor.png);
+}
+.github:hover{
+	background-image: url(../img/github_color.png);
+}
 
-
-
-
-
-
-
-
+.validate-info{
+	margin-bottom: 0;
+}
 
 
 
 
 footer{
-	margin-top: 0.5rem;
 	width: 100%;
-	height: 0.8rem;
-	background-color: #eee;
-	color: #888;
-	padding: 0.2rem 0;
+	height: 0.5rem;
+	background-color: #222;
+	color: #eee;
+	padding: 0.1rem 0;
 	position: absolute;
 	left: 0;
 	bottom: 0;
 }
-footer div{
-	height: 0.4rem;
-}
 footer div p{
 	font-size: 0.12rem;
 	line-height: 0.1rem;
+	margin-bottom: 0;
+	margin-top: 0.05rem;
 }
 
 /* =============
