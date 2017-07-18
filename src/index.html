@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="author" content="Xiaoguo Yu"/>
-	<meta name="keywords" content="前端开发者简历 个人简历 余小果"/>
+	<meta name="keywords" content="前端开发者简历,个人简历,余小果,小果"/>
 	<!--统一视口宽度-->
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<!--ie的文档兼容性，强制使用最新的IE浏览器模式渲染页面，IE11这个文档模式已经被弃用了-->
@@ -330,15 +330,52 @@
 					
 				</div>
 				<h3>当然，您也可以直接给我留言</h3>
-				<div>
+				<div id="leave-message">
 					<form action="" class="form-horizontal">
-						<input type="text" placeholder="您的称呼" class="form-control" name="guest-name" id="guest-name"/>
-						<p class="validate-info" id="guest-name-info">&nbsp;</p>
-						<input type="text" placeholder="您的邮箱" class="form-control" name="guest-email" id="guest-email"/>
-						<p class="validate-info" id="guest-email-info">&nbsp;</p>
-						<textarea name="message" rows="3" cols="" class="form-control" placeholder="您输入您想说的话" name="guest-msg" id="guest-msg"></textarea>
-						<p class="validate-info" id="guest-msg-info">&nbsp;</p>
-						<button type="button" class="form-control">发表留言</button>
+						<div class="form-group">
+							<label for="guest-name" class="col-md-2 hidden-sm hidden-xs control-label">Name:</label>
+							<div class="col-md-8 col-xs-12">
+								<input type="text" placeholder="您的称呼，必填" class="form-control" name="guest-name" id="guest-name" required="true" maxlength="20"/>
+							</div>
+							<div class="col-md-2 col-xs-12 validate-info">
+								<span class="words-count" id="guest-name-words-count">0/20</span>
+								<p class="help-block" id="help-block-name"></p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="guest-email" class="col-md-2 hidden-sm hidden-xs control-label">Email:</label>
+							<div class="col-md-8 col-xs-12">
+								<input type="text" placeholder="您的邮箱，选填" class="form-control" name="guest-email" id="guest-email"/>
+							</div>
+							<div class="col-md-2 col-xs-12 validate-info">
+								<span class="words-count" id="guest-email-words-count">0/30</span>
+								<p class="help-block" id="help-block-email"></p>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="guest-message" class="col-md-2 hidden-sm hidden-xs control-label">Message:</label>
+							<div class="col-md-8 col-xs-12">
+								<textarea rows="3" class="form-control" placeholder="您输入您想说的话，必填" name="guest-message" id="guest-message" maxlength="200"></textarea>
+							</div>
+							<div class="col-md-2 col-xs-12 validate-info">
+								<span class="words-count" id="guest-message-words-count">0/200</span>
+								<p class="help-block" id="help-block-message"></p>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-2 hidden-xs"></div>
+							<div class="col-md-4 col-xs-6">
+								<button type="button" class="form-control btn btn-success" id="submit">
+									<span class="fa fa-commenting"></span>&nbsp;留言
+								</button>
+							</div>
+							<div class="col-md-4 col-xs-6">
+								<button type="button" class="form-control btn btn-warning" id="reset">
+									<span class="fa fa-undo"></span>&nbsp;重写
+								</button>
+							</div>
+							<div class="col-md-2 hidden-xs"></div>
+						</div>
 					</form>
 				</div>
 			</div>
@@ -372,6 +409,7 @@
 	<script src="vendor/fullpage/scrolloverflow.min.js" type="text/javascript" charset="utf-8"></script>
 	
 	<!--自定义JS文件-->
+	<script src="js/util.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
 	<!--引入有字库字体，全文通用字体-->
 	<script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>

@@ -354,6 +354,10 @@ a:hover,a:active{
 	border-radius: 3px;
 	background: #eee;
 }
+#copy-email:hover{
+	color: #eee;
+	background: #333;
+}
 
 .weibo,.github{
 	display: inline-block;
@@ -380,7 +384,38 @@ a:hover,a:active{
 }
 
 .validate-info{
+	position: relative;
+}
+.validate-info p.help-block{
 	margin-bottom: 0;
+	/*line-height: 0.34rem;*/
+	font-size: 0.14rem;
+}
+.words-count{
+	display: block;
+	position: absolute;
+	width: 0.5rem;
+	text-align: right;
+	top: 0.04rem;
+	left: -0.7rem;
+	font-size: 0.12rem;
+	color: #000;
+	opacity: 0.5;
+	z-index: 2;
+}
+@media only screen and (max-width: 992px) {
+	.words-count{
+		top: -24px;
+		left: auto;
+		right: 20px;
+	}
+	.validate-info p.help-block{
+		font-size: 0.12rem;
+		line-height: 0.12rem;
+	}
+}
+.help-block{
+	color: #f00;
 }
 
 
