@@ -142,6 +142,7 @@ a:hover,a:active{
 .resume{
 	background: #d6e0e8;
 }
+	/*fullpage插件设置动画*/
 .resume h1,.resume .someWords,.resume #resume-content{
 	display: none;
 }
@@ -173,6 +174,18 @@ a:hover,a:active{
 		width: 90%;
 		line-height: 0.12em;
 	}
+}
+
+/*配合fullpage动画效果*/
+.skill h1,.skill .someWords,.skill .skill-text{
+	display: none;
+}
+.skill h4,.skill img{
+	opacity: 0;
+	transition: opacity 1s;
+	-webkit-transition: opacity 1s;
+	-moz-transition: opacity 1s;
+	-ms-transition: opacity 1s;
 }
 
 /*前端技能部分*/
@@ -237,8 +250,19 @@ a:hover,a:active{
 	}
 }
 
+
+
+/*作品页*/
 .my-opus{
 	background: #eef;
+}
+/*配合fullpage动画效果*/
+.my-opus li{
+	opacity: 0;
+	transition: opacity 1s;
+	-webkit-transition: opacity 1s;
+	-moz-transition: opacity 1s;
+	-ms-transition: opacity 1s;
 }
 .container-fluid{
 	height: 100%;

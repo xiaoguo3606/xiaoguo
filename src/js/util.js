@@ -66,9 +66,42 @@ function setFullpage(){
 						});
 					});
 				});
-			}else if(index==3){
 				
+				//技能页，初始化时显示动画
+			}else if(index==3 || index==4){
+				$(current).find('h1').fadeIn(300,function(){
+					$(current).find('.someWords').slideDown(300,function(){
+						$(current).find('h4').eq(0).css('opacity',1);
+						$(current).find('img').eq(0).css('opacity',1);
+						$(current).find('.skill-text').eq(0).slideDown(300);
+					});
+				});
+			}else if(index==5){
+				$(current).find('li').eq(0).css('opacity',1);
+				setTimeout(function(){
+					$(current).find('li').eq(1).css('opacity',1);
+				},500);
+				setTimeout(function(){
+					$(current).find('li').eq(2).css('opacity',1);
+				},1000);
+				setTimeout(function(){
+					$(current).find('li').eq(3).css('opacity',1);
+				},1500);
 			}
+		},
+		//slide离开页面时，将prev隐藏
+		onSlideLeave:function(anchorLink,index,slideIndex,direction,nextSlideIndex){
+			var prev=$('.'+anchorLink).find('.slide').eq(slideIndex);
+			prev.find('h4').css('opacity',0);
+			prev.find('img').css('opacity',0);
+			prev.find('.skill-text').slideUp(300);
+		},
+		//slide到当前页面时，显示当前页内容
+		afterSlideLoad:function(anchorLink,index,slideAnchor,slideIndex){
+			var current=$('.'+anchorLink).find('.slide').eq(slideIndex);
+			current.find('h4').css('opacity',1);
+			current.find('img').css('opacity',1);
+			current.find('.skill-text').slideDown(300);
 		},
 		//触摸灵敏度,15为默认值
 		touchSensitivity: 15,
