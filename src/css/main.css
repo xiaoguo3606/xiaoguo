@@ -417,7 +417,28 @@ a:hover,a:active{
 .help-block{
 	color: #f00;
 }
-
+.success-msg{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 2rem;
+	height: 0.5rem;
+	margin-left: -1rem;
+	margin-top: -0.25rem;
+	font-size: 0.16rem;
+	line-height: 0.5rem;
+	background: rgba(255,255,255,0.7);
+	border-radius: 0.1rem;
+	box-shadow: 0 0 5px #ddd;
+	display: none;
+}
+.success-msg img{
+	width: 0.2rem;
+	height: 0.2rem;
+}
+.success-msg span{
+	
+}
 
 
 
