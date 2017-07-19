@@ -43,12 +43,31 @@ function setFullpage(){
 				$('#arrow-to-next').show();
 			}
 		},
-		//显示回到顶部按钮
 		afterLoad:function(anchorLink,index){
+			//判断是否显示回到顶部按钮
 			if(index>1){
 				$('#arrow-to-top').show();
 			}else{
 				$('#arrow-to-top').hide();
+			}
+			var current="."+anchorLink;
+			//处理第2页的动画
+			if(index==2){
+				$(current).find('h1').fadeIn(300,function(){
+					$(current).find('.someWords').slideDown(300,function(){
+						$('#resume-content').fadeIn(800,function(){
+							$('#resume-content h3').eq(1).trigger('click');
+							setTimeout(function(){
+								$('#resume-content h3').eq(2).trigger('click');
+							},600);
+							setTimeout(function(){
+								$('#resume-content h3').eq(0).trigger('click');
+							},1200);
+						});
+					});
+				});
+			}else if(index==3){
+				
 			}
 		},
 		//触摸灵敏度,15为默认值
@@ -253,6 +272,7 @@ function setForm(){
 				'msg':guestMessage
 			};
 		
+		//表单留言
 		$.ajax({
 			type:"POST",
 			url:"php/save_guest_msg.php",
@@ -273,6 +293,9 @@ function setForm(){
 		return false;
 	}
 	
+	/**
+	 * 留言成功时执行
+	 */
 	function msgSuccess(){
 		$('#reset').trigger('click');
 		$('#success-msg').fadeIn(500);
@@ -280,7 +303,10 @@ function setForm(){
 			$('#success-msg').fadeOut(500);
 		},1000);
 	}
-	
+	/**
+	 * 留言失败时执行
+	 * @param {Object} data 从后端返回的数据
+	 */
 	function msgFail(data){
 		alert("对不起，留言失败，错误信息："+data+",站长将尽快解决此问题！");
 	}

@@ -7,6 +7,7 @@ body{
 	background-color: #fdfdfd;
 	overflow: hidden;
 	height: 100%;
+	display: none;
 }
 a{
 	text-decoration: none;
@@ -127,7 +128,7 @@ a:hover,a:active{
 	display: inline-block;
 	font-size: 0.18rem;
 }
-
+	/*屏幕在800px下时,将头像大小减为100px*100px*/
 @media screen and (max-width: 800px) {
 	.headimg img{
 		border-radius: 0.5rem;
@@ -140,6 +141,9 @@ a:hover,a:active{
 /*个人简历部分*/
 .resume{
 	background: #d6e0e8;
+}
+.resume h1,.resume .someWords,.resume #resume-content{
+	display: none;
 }
 #accordion{
 	width: 70%;

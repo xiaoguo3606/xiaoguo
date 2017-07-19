@@ -3,6 +3,9 @@
 var windowWidth=$(window).innerWidth();
 $(document).ready(function(){
 	
+//	页面淡出效果
+	$('body').fadeIn(1000);
+	
 //	页面访问量统计
 	getCounter();
 	
