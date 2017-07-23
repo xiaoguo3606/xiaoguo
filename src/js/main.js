@@ -74,7 +74,7 @@ $(document).ready(function(){
 	
 	
 //	设置title显示效果,基于jquery ui
-	$('#header li,#accordion a,sup').tooltip();
+	$('.header li').tooltip();
 	
 //	设置简历页中弹性标签效果,基于jquery ui
 	$('#accordion').accordion({

@@ -26,6 +26,7 @@ function setFullpage(){
 		anchors:['header','resume','front-skill','other-skill','my-opus','contact-me'],
 		//设置导航栏的active及下一页按钮的显示与隐藏
 		onLeave:function(index,nextIndex,direction){
+			var current=$('.section').eq(index-1);
 			//由于导航栏中下拉菜单显示不正常,进行判断并解决
 			if(nextIndex==3 || nextIndex==4){
 				setTimeout(function(){
@@ -42,6 +43,16 @@ function setFullpage(){
 			}else{
 				$('#arrow-to-next').show();
 			}
+			
+			if(index==2){
+				$('#resume-content').fadeOut(300,function(){
+					$(current).find('.someWords').slideUp(300,function(){
+						$(current).find('h1').fadeOut(300);
+					});
+				});
+			}else if(index==5){
+				$(current).find('li').css('opacity',0);
+			}
 		},
 		afterLoad:function(anchorLink,index){
 			//判断是否显示回到顶部按钮
@@ -55,15 +66,7 @@ function setFullpage(){
 			if(index==2){
 				$(current).find('h1').fadeIn(300,function(){
 					$(current).find('.someWords').slideDown(300,function(){
-						$('#resume-content').fadeIn(800,function(){
-							$('#resume-content h3').eq(1).trigger('click');
-							setTimeout(function(){
-								$('#resume-content h3').eq(2).trigger('click');
-							},600);
-							setTimeout(function(){
-								$('#resume-content h3').eq(0).trigger('click');
-							},1200);
-						});
+						$('#resume-content').fadeIn(800);
 					});
 				});
 				
@@ -159,9 +162,6 @@ function setForm(){
 			validate(this);
 		});
 	});
-	
-
-	
 	
 	//	提交留言按钮事件
 	$('#submit').click(function(){
