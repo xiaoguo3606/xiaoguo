@@ -24,6 +24,32 @@ $(document).ready(function(){
 	$('#arrow-to-top').click(function(){
 		$.fn.fullpage.moveTo('header');
 	});
+	$('#arrow-to-top').hover(function(){
+		$(this).html('回到<br />顶部');
+	},function(){
+		$(this).html('');
+	});
+//	显示二维码
+	$('#qrcode').hover(function(){
+		$('#qrcode-img').fadeIn(300);
+	},function(){
+		$('#qrcode-img').fadeOut(300);
+	});
+//	给我留言
+	$('#message-me').hover(function(){
+		$(this).html('给我<br />留言');
+		$(this).css({
+			fontSize:'0.14rem',
+			lineHeight:'0.14rem',
+			paddingTop:'0.11rem'
+		});
+	},function(){
+		$(this).html('<span class="fa fa-commenting-o"></span>');
+		$(this).css({
+			lineHeight:'0.45rem',
+			paddingTop:0
+		});
+	});
 	
 //	移动端,点击各页面之后,收起导航栏
 	$('#navbar-nav li').not('.dropdown').on('click',function(){
