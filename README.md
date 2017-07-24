@@ -1,8 +1,4 @@
 # [xiaoguo](http://xiaoguo.pro)
-<<<<<<< HEAD
-
-=======
->>>>>>> f8a7fb5cb0eb090b4195cb8e824cdfa65bf6bdaf
 
 ## 简介
 	本站是由个人建立，用于个人学习、测试及交友。
