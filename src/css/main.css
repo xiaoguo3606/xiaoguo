@@ -117,6 +117,7 @@ a:hover,a:active{
 	border-radius: 0.05rem;
 	text-align: center;
 	cursor: pointer;
+	display: none;
 }
 #message-me:hover{
 	background: rgba(0,0,0,0.5);
@@ -304,6 +305,8 @@ a:hover,a:active{
 .skill img{
 	margin-top: 0.2rem;
 	margin-bottom: 0.2rem;
+	border: 10px solid rgba(255,255,255,0.4);
+	box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 .fp-tableCell{
 	vertical-align: top;
@@ -433,6 +436,18 @@ a:hover,a:active{
 
 
 
+
+.contact h4{
+	font-size: 0.18rem;
+	cursor: pointer;
+	
+}
+.contact h4:hover{
+	color: #000;
+}
+.my-email{
+	font-size: 0.14rem;
+}
 
 .contact{
 	background: #ADD8E6;
