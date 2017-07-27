@@ -1,0 +1,47 @@
+/**
+ * 格式化
+ */
+*{
+	margin: 0;
+	padding: 0;
+	color: #222;
+}
+html,body{
+	font-size: 100px;
+	font-family: "微软雅黑";
+}
+body{
+	padding: 0.5rem 0;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+
+/**
+ * 本页样式
+ */
+header{
+	padding: 0.5rem 0;
+	width: 100%;
+	background-color: #d8d2c9;
+	position: relative;
+	height: auto;
+}
+header a{
+	font-size: 0.18rem;
+}
+header .navbar-brand img{
+	height: 0.2rem;
+}
+header li.dropdown{
+	cursor: pointer;
+}
+.header canvas{
+	z-index: 1;
+	position: absolute;
+	left: 0;
+	top: 0.5rem;
+}
