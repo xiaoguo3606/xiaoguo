@@ -1,22 +1,22 @@
 
 $(document).ready(function(){
-	
-	
-	
-	renderHeaderCanvas();
+	$('#header').css('height',$(window).height());
+	$('#header').find('.content').find('img').rotate({
+		angle:-30,
+		animateTo:0
+	});
+	$('#header').find('.content').find('img').animate({
+		opacity:1
+	},800,function(){
+		$('#header-title-bg').animate({
+			width:$('#header').find('h4').css('width'),
+			opacity:1
+		},500,function(){
+			$('#header').find('h4').animate({
+				opacity:1
+			},500);
+		});
+	});
 });
 
-
-function renderHeaderCanvas(){
-	var headerCanvas=document.getElementById('header-canvas'),
-		balloon=document.getElementById('balloon'),
-		context=headerCanvas.getContext('2d');
-	headerCanvas.width=$(window).width()-20;
-	headerCanvas.height=$(window).height()-50;
-	
-	balloon.onload=function(){
-		context.drawImage(balloon,10,10);
-	};
-	
-}
 

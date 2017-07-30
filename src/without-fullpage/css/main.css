@@ -11,7 +11,7 @@ html,body{
 	font-family: "微软雅黑";
 }
 body{
-	padding: 0.5rem 0;
+	position: relative;
 }
 a{
 	text-decoration: none;
@@ -23,13 +23,6 @@ li{
 /**
  * 本页样式
  */
-header{
-	padding: 0.5rem 0;
-	width: 100%;
-	background-color: #d8d2c9;
-	position: relative;
-	height: auto;
-}
 header a{
 	font-size: 0.18rem;
 }
@@ -39,9 +32,100 @@ header .navbar-brand img{
 header li.dropdown{
 	cursor: pointer;
 }
-.header canvas{
+
+
+.header{
+	padding-top: 0.5rem;
+	width: 100%;
+	background-color: #d8d2c9;
+	position: relative;
+	height: 1000px;
+	overflow: hidden;
+}
+.header img.balloon{
+	width: 1.5rem;
+	position: absolute;
+	left: 28%;	
+	top: 20%;
+	z-index: 2;
+}
+.header img.cloud{
+	position: absolute;
+	left: 10%;
+	top: 25%;
 	z-index: 1;
+	width: 1rem;
+	animation: cloud-float 7s infinite linear;
+	-webkit-animation: cloud-float 7s infinite linear;
+	animation-direction: alternate;
+	-webkit-animation-direction: alternate;
+}
+.header img.cloud:nth-child(2){
+	margin-left: 2rem;
+	margin-top: 1rem;
+	animation-delay: 3s;
+	-webkit-animation-delay: 3s;
+}
+.header img.cloud:nth-child(3){
+	margin-left: 4rem;
+	margin-top: 0.3rem;
+	animation-delay: 3s;
+	-webkit-animation-delay: 6s;
+}
+
+@keyframes cloud-float{
+	from{left: 10%;}
+	to{left: 12%;}
+}
+@-webkit-keyframes cloud-float{
+	from{left: 10%;}
+	to{left: 12%;}
+}
+@-moz-keyframes cloud-float{
+	from{left: 10%;}
+	to{left: 12%;}
+}
+.header .content{
+	position: absolute;
+	left: 50%;
+	top: 30%;
+	width: 50%;
+}
+.header .content img{
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
 	position: absolute;
 	left: 0;
-	top: 0.5rem;
+	top: 0;
+	z-index: 4;
+	transform: rotate(-30deg);
+	-ms-transform: rotate(-30deg);
+	-webkit-transform: rotate(-30deg);
+	opacity: 0;
+}
+.header .content h4{
+	height: 100px;
+	line-height: 100px;
+	text-indent: 4em;
+	border-radius: 50px;
+	color: #666;
+	font-size: 0.3rem;
+	margin-top: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 4;
+	opacity: 0;
+}
+.header .content div{
+	width: 0;
+	height: 100px;
+	border-radius: 50px;
+	background-color: #ECE5D9;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 3;
+	opacity: 0;
 }

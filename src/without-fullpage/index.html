@@ -15,10 +15,11 @@
 		<link rel="stylesheet" type="text/css" href="css/main.css"/>
 		<!--jquery.js cdn-->
 		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-
+		<!--jquery rotate plugin-->
+		<script src="vendor/jqueryrotate/jQueryRotate.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 
-	<body>
+	<body data-spy="scroll" data-target="#navbar-menu">
 		<!--
     	作者：余小果
     	时间：2017-07-27
@@ -80,10 +81,15 @@
 
 		<artical>
 			<section class="header" id="header">
-				<img src="img/balloon.png" alt="热气球" id="balloon" />
-				<canvas id="header-canvas"></canvas>
-				<h4>“为了梦想，可以变成一台<b>永动机</b>。”</h4>
-				<h4>我是余小果，一名前端开发者。</h4>
+				<img src="img/balloon.gif" alt="热气球" class="balloon" />
+				<img src="img/cloud_1.png" alt="cloud" class="cloud"/>
+				<img src="img/cloud_2.png" alt="cloud" class="cloud"/>
+				<img src="img/cloud_3.png" alt="cloud" class="cloud"/>
+				<div class="content">
+					<img src="img/head.jpg" alt="头像"/>
+					<h4>我叫余小果，一名前端开发者。&nbsp;&nbsp;</h4>
+					<div id="header-title-bg"></div>
+				</div>
 			</section>
 		</artical>
 
