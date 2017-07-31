@@ -32,6 +32,10 @@ header .navbar-brand img{
 header li.dropdown{
 	cursor: pointer;
 }
+header li img{
+	height: 20px;
+	vertical-align: -20%;
+}
 
 
 .header{
@@ -118,7 +122,7 @@ header li.dropdown{
 	z-index: 4;
 	opacity: 0;
 }
-.header .content div{
+.header .content #header-title-bg{
 	width: 0;
 	height: 100px;
 	border-radius: 50px;
@@ -128,4 +132,21 @@ header li.dropdown{
 	top: 0;
 	z-index: 3;
 	opacity: 0;
+}
+#header-content-info{
+	position: absolute;
+	left: 0;
+	top: 120px;
+}
+#header-content-info li{
+	font-size: 18px;
+	width: 100px;
+	display:inline-block;
+	text-align: center;
+}
+#header-content-info li img{
+	width: 24px;
+	height: 24px;
+	display: inline;
+	position: static;
 }
