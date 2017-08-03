@@ -5,7 +5,7 @@
 }
 body,html{
 	font-size: 14px;
-	font-family: "微软雅黑";
+	font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 a{
 	text-decoration: none;
@@ -89,30 +89,45 @@ header .guest_header img{
 	z-index: 2;
 }
 .main-content .left ul{
-	margin: 100px 0 0 30px;
+	margin-left: 30px;
 }
 .main-content .left li{
 	font-size: 18px;
-	margin-top: 20px;
-	padding: 10px;
+	padding: 20px 10px;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 }
 .main-content .left li.active{
-	background: #f9e3be;
+	background: #f9f0e4;
 }
 .main-content .right{
 	width: calc(100% - 200px);
 	height: 100%;
-	background: #f9e3be;
+	background: #f9f0e4;
 	position: absolute;
 	top: 0;
 	right: 0;
 	z-index: 2;
 	overflow: auto;
 }
+.main-content .right li{
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 10px 30px;
+}
+.main-content .right li h2{
+	text-align: center;
+	margin: 30px 0 10px;
+}
+.main-content .right li h4{
+	font-size: 16px;
+	margin: 10px 0;
+}
 .main-content .right li p{
 	font-size: 16px;
+	text-indent: 2em;
+	margin-bottom: 10px;
 	line-height: 30px;
 	background: url(../img/wave.png);
 }
