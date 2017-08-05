@@ -135,18 +135,36 @@ header li img{
 }
 #header-content-info{
 	position: absolute;
-	left: 0;
+	left: 50%;
 	top: 120px;
+	line-height: 20px;
+	padding: 0;
+	margin-left: -160px;
+	height: 24px;
+	width: 360px;
+	display: none;
 }
 #header-content-info li{
 	font-size: 18px;
 	width: 100px;
 	display:inline-block;
 	text-align: center;
+	vertical-align: top;
 }
 #header-content-info li img{
 	width: 24px;
 	height: 24px;
 	display: inline;
 	position: static;
+}
+.header .content .some-words{
+	font-size: 26px;
+	position: absolute;
+	left: -500px;
+	top: 200px;
+	color: #777;
+	display: none;
+}
+.header .content .some-words span{
+	color: #777;
 }

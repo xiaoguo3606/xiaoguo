@@ -14,7 +14,10 @@ $(document).ready(function(){
 		},500,function(){
 			$('#header').find('h4').animate({
 				opacity:1
-			},500);
+			},500,function(){
+				$('#header-content-info').fadeIn(500);
+				$('#someWords').fadeIn(500);
+			});
 		});
 	});
 });
