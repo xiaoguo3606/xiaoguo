@@ -9,11 +9,12 @@
 html,body{
 	font-size: 100px;
 	font-family: "微软雅黑";
+	background-color: #eee;
 }
 body{
 	position: relative;
 }
-a{
+a,a:hover{
 	text-decoration: none;
 }
 li{
@@ -136,7 +137,7 @@ header li img{
 #header-content-info{
 	position: absolute;
 	left: 50%;
-	top: 120px;
+	top: 140px;
 	line-height: 20px;
 	padding: 0;
 	margin-left: -160px;
@@ -167,4 +168,62 @@ header li img{
 }
 .header .content .some-words span{
 	color: #777;
+}
+.header .content a.webinfo{
+	display: block;
+	position: absolute;
+	top: 300px;
+	left: 350px;
+	font-size: 18px;
+	color: #fff;
+	width: 160px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	background: #d8b889;
+	border-radius: 12px;
+}
+.header .content a.webinfo:hover{
+	text-decoration: none;
+	background: #bb8d49;
+}
+
+.resume{
+	width: 100%;
+	font-size: 16px;
+}
+.resume a{
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	border-radius: 50px;
+	text-align: center;
+	background-color: #00B3EA;
+	color: #fff;
+}
+.resume-content{
+	background: #99b3ea;
+}
+.resume figure{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background: #007FFF;
+	background: radial-gradient(circle at 30px 30px,#acf,#02226a);
+}
+
+
+
+
+footer{
+	background: #444;
+	padding: 20px 0;
+	margin-top: 10px;
+}
+footer p{
+	margin: 0;
+	color: #eee;
+	font-size: 12px;
+	text-align: center;
 }
