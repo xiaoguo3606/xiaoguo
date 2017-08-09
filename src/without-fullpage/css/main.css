@@ -227,3 +227,6 @@ footer p{
 	font-size: 12px;
 	text-align: center;
 }
+footer p span{
+	color: #eee;
+}
